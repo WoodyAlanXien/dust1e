@@ -1,0 +1,151 @@
+/* File: css/dust1e.css */
+
+/* Import the Star Strella font */
+@font-face {
+    font-family: 'Star Strella';
+    src: url('../fonts/Star-Strella.ttf') format('truetype');
+  }
+
+/* General Styles */
+body.dust1e {
+    font-family: 'Star Strella', sans-serif;
+    background-color: #35352e;
+    color: #c0c0c0;
+  }
+  
+  /* Actor Sheet Styles */
+  .dust1e .actor-sheet {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .dust1e .actor-sheet .header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .dust1e .actor-sheet .attributes {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .dust1e .actor-sheet .attribute {
+    flex: 1;
+    margin: 0 0.5rem;
+    text-align: center;
+    background: #e9e9e9;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .dust1e .actor-sheet .attribute .label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .dust1e .actor-sheet .attribute .value {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Item Sheet Styles */
+  .dust1e .item-sheet {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .dust1e .item-sheet .header {
+    background: #e74c3c;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .dust1e .item-sheet .details {
+    padding: 1rem 0;
+  }
+  
+  .dust1e .item-sheet .detail {
+    margin: 0.5rem 0;
+  }
+  
+  .dust1e .item-sheet .detail .label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .dust1e .item-sheet .detail .value {
+    color: #333;
+  }
+  
+  /* Custom Buttons */
+  .dust1e .button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dust1e .button:hover {
+    background: #357ab7;
+  }
+  
+  /* Custom Dialog Styles */
+  .dust1e .dialog {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .dust1e .dialog .header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .dust1e .dialog .content {
+    padding: 1rem 0;
+  }
+  
+  .dust1e .dialog .buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+  }
+  
+  .dust1e .dialog .button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 0.5rem;
+  }
+  
+  .dust1e .dialog .button:hover {
+    background: #c0392b;
+  }
+  

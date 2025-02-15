@@ -1,0 +1,25 @@
+<!-- File: templates/dialogs/custom-roll-dialog.html -->
+
+<div class="dialog-content">
+    <header class="header">
+      <h2>{{localize "dust1e.roll.dialog.title"}}</h2>
+    </header>
+    <section class="roll-options">
+      <div class="option">
+        <label for="roll-dice">{{localize "dust1e.roll.dialog.dice"}}</label>
+        <input type="number" id="roll-dice" name="roll-dice" value="1" min="1">
+      </div>
+      <div class="option">
+        <label for="keep-roll">{{localize "dust1e.roll.dialog.keep"}}</label>
+        <select id="keep-roll" name="keep-roll">
+          <option value="highest">{{localize "dust1e.roll.dialog.highest"}}</option>
+          <option value="lowest">{{localize "dust1e.roll.dialog.lowest"}}</option>
+        </select>
+      </div>
+    </section>
+    <footer class="footer">
+      <button type="button" class="button" data-action="roll">{{localize "dust1e.roll.dialog.roll"}}</button>
+      <button type="button" class="button" data-action="cancel">{{localize "dust1e.roll.dialog.cancel"}}</button>
+    </footer>
+  </div>
+  

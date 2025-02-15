@@ -1,0 +1,34 @@
+<!-- File: templates/item/item-sheet.html -->
+
+<div class="window-content">
+    <header class="header">
+      <h2>{{name}}</h2>
+    </header>
+    <section class="attributes">
+      {{#if (eq type "weapon")}}
+      <div class="attribute">
+        <span class="label">{{localize "dust1e.attribute.damage"}}</span>
+        <span class="value">{{data.attributes.damage.total}}</span>
+      </div>
+      {{/if}}
+      {{#if (eq type "armor")}}
+      <div class="attribute">
+        <span class="label">{{localize "dust1e.attribute.defense"}}</span>
+        <span class="value">{{data.attributes.defense.total}}</span>
+      </div>
+      {{/if}}
+      {{#if (eq type "ability")}}
+      <div class="attribute">
+        <span class="label">{{localize "dust1e.attribute.aetherCost"}}</span>
+        <span class="value">{{data.attributes.aetherCost.total}}</span>
+      </div>
+      {{/if}}
+      
+      <!-- Add more attributes as needed -->
+    </section>
+    <section class="details">
+      <h3>{{localize "dust1e.details"}}</h3>
+      <div>{{data.details.description}}</div>
+    </section>
+  </div>
+  

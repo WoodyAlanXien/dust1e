@@ -1,0 +1,23 @@
+<!-- File: templates/actor/actor-sheet.html -->
+
+<div class="window-content">
+    <header class="header">
+      <h2>{{name}}</h2>
+    </header>
+    <section class="attributes">
+      <div class="attribute">
+        <span class="label">{{localize "dust1e.attribute.stress"}}</span>
+        <span class="value">{{data.attributes.stress.value}} / {{data.attributes.stress.max}}</span>
+      </div>
+      <div class="attribute">
+        <span class="label">{{localize "dust1e.attribute.corruption"}}</span>
+        <span class="value">{{data.attributes.corruption.value}} / {{data.attributes.corruption.max}}</span>
+      </div>
+      <!-- Add more attributes as needed -->
+    </section>
+    <section class="details">
+      <h3>{{localize "dust1e.details"}}</h3>
+      <div>{{data.details.description}}</div>
+    </section>
+  </div>
+  

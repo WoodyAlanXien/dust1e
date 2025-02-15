@@ -1,0 +1,122 @@
+{
+    "id": "dust1e",
+    "title": "DUST",
+    "description": "A therapy based gaming system for FoundryVTT.",
+    "authors": [
+      {
+        "name": "Woody Alan Xien",
+        "discord": "woodyalanxienttv"
+      }
+    ],
+    "url": "https://github.com/woodyalanxien/dust1e",
+    "license": "LICENSE.txt",
+    "readme": "README.md",
+    "bugs": "https://github.com/woodyalanxien/dust1e/issues",
+    "changelog": "CHANGELOG.md",
+    "media": [
+      {
+        "type": "setup",
+        "url": "systems/dust1e/assets/Logo3630.jpg",
+        "thumbnail": "systems/dust1e/assets/dust-thumbnail.jpg"
+      }
+    ],
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": 10,
+      "verified": "10.500"
+    },
+    "esmodules": ["module/dust1e.mjs"],
+    "styles": ["css/dust1e.css"],
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+    ],
+    "actorTypes": ["character", "npc", "monster"],
+    "itemTypes": ["weapon", "armor", "ability", "archetype", "discipline", "speciality", "feature", "quirk", "drive", "origin", "objective"],
+    "packs": [ 
+      {
+        "name": "origins",
+        "label": "Origins",
+        "path": "systems/dust1e/packs/origins.db",
+        "type": "Item"
+      },
+      {
+        "name": "drives",
+        "label": "Drives",
+        "path": "systems/dust1e/packs/drives.db",
+        "type": "Item"
+      },
+      {
+        "name": "quirks",
+        "label": "Quirks",
+        "path": "systems/dust1e/packs/quirks.db",
+        "type": "Item"
+      },
+      {
+        "name": "features",
+        "label": "Features",
+        "path": "systems/dust1e/packs/features.db",
+        "type": "Item"
+      },
+      {
+        "name": "specialities",
+        "label": "Specialities",
+        "path": "systems/dust1e/packs/specialities.db",
+        "type": "Item"
+      },
+      {
+        "name": "disciplines",
+        "label": "Disciplines",
+        "path": "systems/dust1e/packs/disciplines.db",
+        "type": "Item"
+      },
+      {
+        "name": "archetypes",
+        "label": "Archetypes",
+        "path": "systems/dust1e/packs/archetypes.db",
+        "type": "Item"
+      },
+      {
+        "name": "abilities",
+        "label": "Abilities",
+        "path": "systems/dust1e/packs/abilities.db",
+        "type": "Item"
+      }
+    ],
+    "packFolders": [],
+    "fonts": [
+  {
+    "name": "Bold Robot",
+    "src": "systems/dust1e/fonts/Roboto-Bold.woff2"
+  },
+  {
+    "name": "Star Strella",
+    "src": "systems/dust1e/fonts/Star-Strella.ttf"
+  },
+  {
+    "name": "Viner",
+    "src": "systems/dust1e/fonts/VINERITC.ttf"
+  },
+  {
+    "name": "Vivaldi",
+    "src": "systems/dust1e/fonts/VIVALDII.ttf"
+  },
+  {
+    "name": "Vladimir",
+    "src": "systems/dust1e/fonts/VLADIMIR.ttf"
+  },
+]
+
+    "socket": false,
+    "manifest": "https://github.com/woodyalanxien/dust1e/releases/latest",
+    "download": "https://github.com/woodyalanxien/dust1e/archive/refs/tags/v1.0.0.zip",
+    "background": "systems/dust1e/assets/background-image.jpg",
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "stress",
+    "secondaryTokenAttribute": "corruption"
+  }
+  
