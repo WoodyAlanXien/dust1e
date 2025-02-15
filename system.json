@@ -108,8 +108,7 @@
     "name": "Vladimir",
     "src": "systems/dust1e/fonts/VLADIMIR.ttf"
   }
-]
-
+],
     "socket": false,
     "manifest": "https://github.com/woodyalanxien/dust1e/releases/latest/system.json",
     "download": "https://github.com/WoodyAlanXien/dust1e/releases/download/latest/dust1e.zip",
