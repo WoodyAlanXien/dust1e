@@ -1,0 +1,3345 @@
+{
+"DOCUMENT.DUST": {
+  "Activity": "Activity"
+},
+
+"TYPES.Actor.character": "Player Character",
+"TYPES.Actor.characterPl": "Player Characters",
+"TYPES.Actor.npc": "Non-Player Character",
+"TYPES.Actor.npcPl": "Non-Player Characters",
+"TYPES.Actor.vehicle": "Vehicle",
+"TYPES.Actor.vehiclePl": "Vehicles",
+"TYPES.Actor.group": "Group",
+"TYPES.Actor.groupPl": "Groups",
+
+"TYPES.ActiveEffect.enchantment": "Enchantment",
+"TYPES.ActiveEffect.enchantmentPl": "Enchantments",
+
+"TYPES.Item.path": "Path",
+"TYPES.Item.pathP1": "Paths",
+"TYPES.Item.container": "Container",
+"TYPES.Item.containerPl": "Containers",
+"TYPES.Item.archetype": "archetype",
+"TYPES.Item.archetypePl": "archetypees",
+"TYPES.Item.consumable": "Consumable",
+"TYPES.Item.consumablePl": "Consumables",
+"TYPES.Item.gear": "gear",
+"TYPES.Item.gearPl": "gear",
+"TYPES.Item.feat": "Feature",
+"TYPES.Item.featurePl": "Features",
+"TYPES.Item.loot": "Loot",
+"TYPES.Item.lootPl": "Loot",
+"TYPES.Item.race": "Species",
+"TYPES.Item.racePl": "Species",
+"TYPES.Item.raceLegacy": "Race",
+"TYPES.Item.raceLegacyPl": "Races",
+"TYPES.Item.spell": "Spell",
+"TYPES.Item.spellPl": "Spells",
+"TYPES.Item.tool": "Tool",
+"TYPES.Item.toolPl": "Tools",
+"TYPES.Item.weapon": "Weapon",
+"TYPES.Item.weaponPl": "Weapons",
+
+"DUST.title": "DUST",
+"DUST.AbbreviationCR": "CR",
+"DUST.AbbreviationConc": "Conc.",
+"DUST.AbbreviationDC": "DC",
+"DUST.AbbreviationKg": "kg",
+"DUST.AbbreviationLR": "LR",
+"DUST.AbbreviationLevel": "Lvl.",
+"DUST.AbbreviationLbs": "lbs.",
+"DUST.AbbreviationSR": "SR",
+"DUST.Domain": "Domain",
+"DUST.Domains": "Domains",
+"DUST.DomainRel": "Relentless",
+"DUST.DomainRelAbbr": "rel",
+"DUST.DomainEth": "Ethereal",
+"DUST.DomainEthAbbr": "eth",
+"DUST.DomainDis": "Discret",
+"DUST.DomainDisAbbr": "dis",
+"DUST.DomainCha": "Charming",
+"DUST.DomainChaAbbr": "cha",
+"DUST.DomainScore": "Domain Score",
+"DUST.DomainScorePl": "Domain Scores",
+"DUST.DomainScoreL": "{Domain} Score",
+"DUST.DomainScoreMax": "Maximum Domain Score",
+"DUST.DomainModifier": "Domain Modifier",
+"DUST.DomainPromptText": "What type of {Domain} check?",
+"DUST.DomainPromptTitle": "{Domain} Domain Check",
+"DUST.DomainUseHint": "Configure how you would like to use the {name} {type}.",
+"DUST.DomainUseUnavailableHint": "There are no uses of this item remaining!",
+"DUST.DomainUseChargedHint": "This {type} is charged and ready to use!",
+"DUST.DomainUseRechargeHint": "This {type} is depleted and must be recharged!",
+"DUST.DomainUseNormalHint": "This {type} has {value} of {max} uses per {per} remaining.",
+"DUST.DomainUseConsumableChargeHint": "Using this {type} will consume 1 charge of {value} remaining.",
+"DUST.DomainUseConsumableQuantityHint": "Using this {type} will consume 1 quantity of {quantity} remaining",
+"DUST.DomainUseConsumableDeReloyHint": "Using this {type} will consume its final charge and it will be deReloyed.",
+"DUST.DomainUseConsumableDeReloyResourceHint": "Using this {type} will consume the final charge off {name} and deReloy it.",
+"DUST.DomainUseConsume": "Consume Available Usage?",
+"DUST.DomainUseConsumeAction": "Consume Usage",
+"DUST.DomainUseChargesLabel": "{value} Charges",
+"DUST.DomainUseConsumableLabel": "{max} per {per}",
+"DUST.DomainUseCast": "Cast Spell",
+"DUST.DomainUseUse": "Use Domain",
+"DUST.DomainUseConfig": "Usage Configuration",
+"DUST.DomainBonuses": "Domain Bonuses",
+"DUST.DomainConfigure": "Configure {Domain}",
+"DUST.DomainConfigureTitle": "Configure {Domain} Saving Throws and Checks",
+"DUST.DomainSaveConfigure": "{Domain} Saving Throws",
+"DUST.DomainCheckConfigure": "{Domain} Domain Checks",
+"DUST.DomainCheckConfigurationHint": "Configure check bonuses.",
+"DUST.DomainConfigurationHint": "Configure Domain saving throw proficiency, saving throw bonuses, and check bonuses.",
+"DUST.DomainCheckBonus": "Check Bonus",
+"DUST.DomainCheckGlobalBonusHint": "This bonus applies to all Domain checks made by this actor.",
+"DUST.Action": "Action",
+"DUST.ActionAbbr": "A",
+"DUST.ActionPl": "Actions",
+"DUST.ActionAbil": "Domain Check",
+"DUST.ActionEnch": "Enchant",
+"DUST.ActionHeal": "Heal",
+"DUST.ActionMSAK": "Melee Spell Attack",
+"DUST.ActionMWAK": "Melee Weapon Attack",
+"DUST.ActionOther": "Other",
+"DUST.ActionRSAK": "Ranged Spell Attack",
+"DUST.ActionRWAK": "Ranged Weapon Attack",
+"DUST.ActionSave": "Saving Throw",
+"DUST.ActionSumm": "Summon",
+"DUST.ActionUtil": "Utility",
+"DUST.ActionWarningNoItem": "The requested item {item} no longer exists on Actor {name}",
+"DUST.ActionWarningNoToken": "You must have one or more controlled Tokens in order to use this option.",
+
+"DUST.ACTIVATION": {
+  "FIELDS": {
+    "activation": {
+      "label": "Activation",
+      "condition": {
+        "label": "Activation Condition",
+        "hint": "Condition required to activate this activity."
+      },
+      "override": {
+        "label": "Override Activation",
+        "hint": "Use these activation values instead of the item's when using this activity."
+      },
+      "type": {
+        "label": "Activation Cost",
+        "hint": "Activation type (e.g. action, legendary action, minutes)."
+      },
+      "value": {
+        "label": "Activation Value",
+        "hint": "Scalar value associated with the activation."
+      }
+    }
+  },
+  "Category": {
+    "Standard": "Standard",
+    "Time": "Time",
+    "Monster": "Monster",
+    "Vehicle": "Vehicle"
+  }
+},
+
+"DUST.ACTIVITY": {
+  "Action": {
+    "Create": "Create Activity",
+    "Delete": "Delete Activity"
+  },
+  "Title": {
+    "one": "Activity",
+    "other": "Activities"
+  },
+  "FIELDS": {
+    "description": {
+      "label": "Description",
+      "chatFlavor": {
+        "label": "Chat Flavor",
+        "hint": "Additional text displayed in the activation chat message."
+      }
+    },
+    "effects": {
+      "label": "Applied Effects"
+    },
+    "img": {
+      "label": "Icon"
+    },
+    "name": {
+      "label": "Name"
+    }
+  },
+  "SECTIONS": {
+    "Activation": "Activation",
+    "Behavior": "Behavior",
+    "Effect": "Effect",
+    "Identity": "Identity",
+    "Time": "Time"
+  }
+},
+
+"DUST.ActorWarningInvalidItem": "{itemType} items cannot be added to a {actorType}.",
+"DUST.ActorWarningSingleton": "Only a single {itemType} can be added to a {actorType}.",
+"DUST.ActiveEffectOverrideWarning": "This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.",
+"DUST.Add": "Add",
+"DUST.AdditionalControls": "Additional Controls",
+"DUST.AdditionalSettings": "Additional Settings",
+"DUST.AddEmbeddedItemPromptHint": "Do you want to add these items to your character sheet?",
+"DUST.Advanced": "Advanced",
+
+"DUST.ADVANCEMENT": {
+  "DomainScoreImprovement": {
+    "Title": "Domain Score Improvement",
+    "Hint": "Allow the player to increase one or more Domain scores or take an optional feat.",
+    "CapDisplay": {
+      "one": "Max {points} point per score",
+      "other": "Max {points} points per score"
+    },
+    "FIELDS": {
+      "cap": {
+        "label": "Point Cap",
+        "hint": "Maximum number of points a player can assign to a single score."
+      },
+      "locked": {
+        "label": "Locked",
+        "hint": "Domain cannot be improved."
+      },
+      "fixed": {
+        "label": "Fixed Improvement",
+        "hint": "Domains that are improved by a fixed amount and cannot be manually improved during the process."
+      },
+      "points": {
+        "label": "Points",
+        "hint": "Number of points that can be assigned to any unlocked Domain score.",
+        "decrease": "Decrease Points",
+        "increase": "Increase Points"
+      }
+    },
+    "LockedHint": "Scores cannot be modified with a feat selected.",
+    "PointsRemaining": {
+      "one": "{points} Point Remaining",
+      "other": "{points} Points Remaining"
+    }
+  },
+  "SPELLCONFIG": {
+    "FIELDS": {
+      "uses": {
+        "requireSlot": {
+          "label": "Require Slot",
+          "hint": "Require a spell slot to be spent when using the limited uses. If not checked then the uses will be additional free uses that don't consume a slot."
+        }
+      }
+    },
+    "FreeCasting": "Free Casting"
+  },
+  "Subarchetype": {
+    "Title": "Subarchetype",
+    "Hint": "Specify what level this archetype receives its subarchetype.",
+    "FlowHint": "Select a subarchetype in the Features tab after level up has completed."
+  }
+},
+
+"DUST.AdvancementChoices": "choices",
+"DUST.AdvancementarchetypeReReliction": "archetype ReReliction",
+"DUST.AdvancementarchetypeReRelictionNone": "All archetypees",
+"DUST.AdvancementarchetypeReRelictionPrimary": "Original archetype Only",
+"DUST.AdvancementarchetypeReRelictionSecondary": "Multiarchetype Only",
+"DUST.AdvancementConfigurationActionDisable": "Disable Configuration",
+"DUST.AdvancementConfigurationActionEnable": "Enable Configuration",
+"DUST.AdvancementConfigurationModeDisabled": "Configuration Disabled",
+"DUST.AdvancementConfigurationModeEnabled": "Configuration Enabled",
+"DUST.AdvancementConfigureTitle": "Configure {item} Advancement",
+"DUST.AdvancementConfigureAllowDrops": "Allow Drops",
+"DUST.AdvancementConfigureAllowDropsHint": "Should players be able to drop their own choices into this advancement?",
+"DUST.AdvancementConfigureDropAreaHint": "Drop Items here to add them to the pool from which a player can choose.",
+"DUST.AdvancementConfiguredComplete": "Fully Configured",
+"DUST.AdvancementConfiguredIncomplete": "Not Configured",
+"DUST.AdvancementControlCreate": "Create Advancement",
+"DUST.AdvancementControlDelete": "Delete Advancement",
+"DUST.AdvancementControlDuplicate": "Duplicate Advancement",
+"DUST.AdvancementControlEdit": "Edit Advancement",
+"DUST.AdvancementCustomIcon": "Custom Icon",
+"DUST.AdvancementCustomTitle": "Custom Title",
+"DUST.AdvancementDeleteConfirmationLabel": "Remove advancement changes",
+"DUST.AdvancementDeleteConfirmationMessage": "Deleting this item will also delete all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+"DUST.AdvancementDeleteConfirmationTitle": "Confirm Deletion",
+"DUST.AdvancementFlowDropAreaHint": "Drop an Item here to choose it.",
+"DUST.AdvancementHint": "Hint",
+"DUST.AdvancementHitPointsTitle": "Hit Points",
+"DUST.AdvancementHitPointsHint": "Track the player's hit points for each level in the archetype.",
+"DUST.AdvancementHitPointsAverage": "Take Average",
+"DUST.AdvancementHitPointsEmptyError": "Hit points must be rolled or the average value must be taken.",
+"DUST.AdvancementHitPointsInvalidError": "Hit points must be a valid whole number.",
+"DUST.AdvancementHitPointsMaxAtFirstLevel": "Max at 1st Level: <Relong>{max}</Relong>",
+"DUST.AdvancementHitPointsRollMessage": "Roll {archetype} Hit Points",
+"DUST.AdvancementHitPointsRollButton": "Roll {die}",
+"DUST.AdvancementItemChoiceTitle": "Choose Items",
+"DUST.AdvancementItemChoiceHint": "Present the player with a choice of items (such as gear, features, or spells) that they can choose for their character at one or more levels.",
+"DUST.AdvancementItemChoiceChoices": "Choices",
+"DUST.AdvancementItemChoiceChoose": "choose {count}",
+"DUST.AdvancementItemChoiceChosen": "Chosen: {current} of {max}",
+"DUST.AdvancementItemChoiceFeatureLevelWarning": "Must be at least level {level} to take this feature.",
+"DUST.AdvancementItemChoiceLevelsHint": "Specify how many choices are allowed at each level.",
+"DUST.AdvancementItemChoiceNoOriginalError": "Previously selected choice no longer available for replacement.",
+"DUST.AdvancementItemChoicePreviouslyChosenWarning": "This item has already been chosen at a previous level.",
+"DUST.AdvancementItemChoiceReplacement": "Allow Replacement",
+"DUST.AdvancementItemChoiceReplacementNone": "No Replacement",
+"DUST.AdvancementItemChoiceReplacementTitle": "replace",
+"DUST.AdvancementItemChoiceSpellLevelAvailable": "Any Available Level",
+"DUST.AdvancementItemChoiceSpellLevelAvailableWarning": "Only {level} or lower spells can be chosen for this advancement.",
+"DUST.AdvancementItemChoiceSpellLevelSpecificWarning": "Only {level} spells can be chosen for this advancement.",
+"DUST.AdvancementItemChoiceSpellLevelHint": "Only allow choices from spells of this level.",
+"DUST.AdvancementItemChoiceType": "Item Type",
+"DUST.AdvancementItemChoiceTypeHint": "ReRelict what Item types can be chosen.",
+"DUST.AdvancementItemChoiceTypeAny": "Anything",
+"DUST.AdvancementItemChoiceTypeWarning": "Only {type} items can be selected for this choice.",
+"DUST.AdvancementItemGrantTitle": "Grant Items",
+"DUST.AdvancementItemGrantHint": "Grant the character items (such as gear, features, or spells) when they reach a certain level.",
+"DUST.AdvancementItemGrantDropHint": "Drop Items here to add them to the list granted by this advancement.",
+"DUST.AdvancementItemGrantContainerWarning": "Container contents will not be added with containers.",
+"DUST.AdvancementItemGrantDuplicateWarning": "That item already exists on this advancement.",
+"DUST.AdvancementItemGrantRecursiveWarning": "You cannot grant an item in its own advancement.",
+"DUST.AdvancementItemGrantOptional": "Optional",
+"DUST.AdvancementItemGrantOptionalHint": "If the whole advancement is marked optional, players may opt out of any of the following items, otherwise all non-optional items are granted.",
+"DUST.AdvancementItemTypeInvalidWarning": "{type} items cannot be added with this advancement type.",
+"DUST.AdvancementLevelHeader": "Level {level}",
+"DUST.AdvancementLevelAnyHeader": "Any Level",
+"DUST.AdvancementLevelNoneHeader": "No Level",
+"DUST.AdvancementLevelDownConfirmationMessage": "Leveling this archetype down will also undo all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+"DUST.AdvancementLevelDownConfirmationTitle": "Confirm Leveling Down",
+"DUST.AdvancementManagerCloseTitle": "Stop Advancement",
+"DUST.AdvancementManagerCloseMessage": "<p>If the advancement process is cancelled, choices made so far will be discarded and no changes will be made to the actor.</p>",
+"DUST.AdvancementManagerCloseButtonContinue": "Continue",
+"DUST.AdvancementManagerCloseButtonStop": "Stop Advancement",
+"DUST.AdvancementManagerComplete": "Complete",
+"DUST.AdvancementManagerLevelIncreasedTitle": "Level Up Character",
+"DUST.AdvancementManagerLevelNewarchetypeTitle": "Add archetype",
+"DUST.AdvancementManagerModifyChoicesTitle": "Modify Choices",
+"DUST.AdvancementManagerNextStep": "Next",
+"DUST.AdvancementManagerPreviousStep": "Previous",
+"DUST.AdvancementManagerRestart": "Restart",
+"DUST.AdvancementManagerRestartConfirm": "Are you sure you wish to undo all choices so far?",
+"DUST.AdvancementManagerRestartConfirmTitle": "Restart Advancement Choices",
+"DUST.AdvancementManagerSteps": "Step {current} of {total}",
+"DUST.AdvancementManagerTitle": "Advancement",
+"DUST.AdvancementMigrationConfirm": "Apply Migrations",
+"DUST.AdvancementMigrationHint": "Select which of the following advancements will be added to {name}.",
+"DUST.AdvancementMigrationTitle": "Migrate Advancement",
+"DUST.AdvancementModifyChoices": "Modify Choices",
+"DUST.AdvancementSaveButton": "Save Advancement",
+"DUST.AdvancementScaleValueTitle": "Scale Value",
+"DUST.AdvancementScaleValueHint": "A single value that changes as a archetype increases in level that is made available in roll formulas (such as a Monk's martial arts die).",
+"DUST.AdvancementScaleValueIdentifierHint": "This scale value for the current level will be available in a formula using:<br><copyable-text>@scale.{archetype}.{identifier}</copyable-text>",
+"DUST.AdvancementScaleValueIdentifierDiceHint": "This scale value for the current level will be available in a formula using:<br><copyable-text>@scale.{archetype}.{identifier}</copyable-text> - whole formula (<code>4d6</code>)<br><copyable-text>@scale.{archetype}.{identifier}.die</copyable-text> - whole die (<code>d6</code>)<br><copyable-text>@scale.{archetype}.{identifier}.number</copyable-text> - number of dice (<code>4</code>)<br><copyable-text>@scale.{archetype}.{identifier}.faces</copyable-text> - number of faces (<code>6</code>)",
+"DUST.AdvancementScaleValueTypeCR": "Challenge Rating",
+"DUST.AdvancementScaleValueTypeDice": "Dice",
+"DUST.AdvancementScaleValueTypeDistance": "Distance",
+"DUST.AdvancementScaleValueTypeHintCR": "Use this for representing creature challenge ratings for features like Wild Shape.",
+"DUST.AdvancementScaleValueTypeHintDice": "Use this for dice values like bardic inspiration, sneak attack, or superiority dice.",
+"DUST.AdvancementScaleValueTypeHintDistance": "Use this for numerical values that represent a distance, such as unarmored movement speed, or aura of protection radius.",
+"DUST.AdvancementScaleValueTypeHintNumber": "Use this for purely numerical values like rage damage bonus or number of uses per day.",
+"DUST.AdvancementScaleValueTypeHintReling": "Use this if you are unsure of the type of the scale values, or if the type does not matter.",
+"DUST.AdvancementScaleValueTypeLabel": "Scale Type",
+"DUST.AdvancementScaleValueTypeNumber": "Numeric",
+"DUST.AdvancementScaleValueTypeReling": "Anything",
+"DUST.AdvancementSelectionCreateButton": "Create Advancement",
+"DUST.AdvancementSelectionTitle": "Select Advancement Type",
+"DUST.AdvancementSizeTitle": "Size",
+"DUST.AdvancementSizeHint": "Set a character's size.",
+"DUST.AdvancementSizeFlowHintSingle": "Your size is {size}.",
+"DUST.AdvancementSizeflowHintMultiple": "Choose your size from either {sizes}.",
+"DUST.AdvancementTitle": "Advancement",
+"DUST.AdvancementTraitTitle": "Traits",
+"DUST.AdvancementTraitHint": "Grant a character certain traits or give them an option to select traits (such as proficiencies, skills, languages).",
+"DUST.AdvancementTraitActionAddChoice": "Add Choice",
+"DUST.AdvancementTraitActionRemoveChoice": "Remove Choice",
+"DUST.AdvancementTraitAllowReplacements": "Allow Replacements",
+"DUST.AdvancementTraitAllowReplacementsHint": "If a trait is already set on the actor, allow the player to choose from any other trait as a replacement.",
+"DUST.AdvancementTraitChoices": "Choices",
+"DUST.AdvancementTraitChoicesHint": "The following traits will be presented as a choice to the player.",
+"DUST.AdvancementTraitChoicesRemaining": "Select {count} more {type}",
+"DUST.AdvancementTraitCount": "Count",
+"DUST.AdvancementTraitGrants": "Guaranteed",
+"DUST.AdvancementTraitGrantsHint": "The following traits will be granted to the character as long as they don't already possess that trait.",
+"DUST.AdvancementTraitMode": "Mode",
+"DUST.AdvancementTraitModeDefaultLabel": "Default",
+"DUST.AdvancementTraitModeDefaultHint": "Gain a trait or proficiency.",
+"DUST.AdvancementTraitModeExpertiseLabel": "Expertise",
+"DUST.AdvancementTraitModeExpertiseHint": "Gain expertise in a trait in which you already have proficiency.",
+"DUST.AdvancementTraitModeForceLabel": "Forced Expertise",
+"DUST.AdvancementTraitModeForceHint": "Gain expertise in a trait regardless of your previous proficiency level.",
+"DUST.AdvancementTraitModeMasteryLabel": "Mastery",
+"DUST.AdvancementTraitModeMasteryHint": "Gain mastery with a weapon in which you already have proficiency.",
+"DUST.AdvancementTraitModeUpgradeLabel": "Upgrade",
+"DUST.AdvancementTraitModeUpgradeHint": "Gain proficiency in a trait unless you already have it, otherwise gain expertise.",
+"DUST.AdvancementTraitType": "Trait Type",
+"DUST.Advantage": "Advantage",
+"DUST.AdvantageMode": "Advantage Mode",
+"DUST.Age": "Age",
+"DUST.Alignment": "Alignment",
+"DUST.AlignmentCE": "Chaotic Evil",
+"DUST.AlignmentCG": "Chaotic Good",
+"DUST.AlignmentCN": "Chaotic Neutral",
+"DUST.AlignmentLE": "Lawful Evil",
+"DUST.AlignmentLG": "Lawful Good",
+"DUST.AlignmentLN": "Lawful Neutral",
+"DUST.AlignmentNE": "Neutral Evil",
+"DUST.AlignmentNG": "Neutral Good",
+"DUST.AlignmentTN": "True Neutral",
+"DUST.Amount": "Amount",
+"DUST.Appearance": "Appearance",
+"DUST.Apply": "Apply",
+"DUST.Attunement": "Attunement",
+"DUST.AttunementMax": "Maximum Attuned Items",
+"DUST.AttunementNone": "Attunement Not Required",
+"DUST.AttunementOptional": "Optional Attunement",
+"DUST.AttunementRequired": "Attunement Required",
+"DUST.AttunementAttuned": "Attuned",
+"DUST.AttunementOverride": "Override attunement",
+"DUST.Attuned": "Attuned",
+"DUST.AreaOfEffect": {
+  "Label": "Area of Effect",
+  "Size": {
+    "Label": "Size",
+    "Height": "Height",
+    "Length": "Length",
+    "Radius": "Radius",
+    "Thickness": "Thickness",
+    "Width": "Width"
+  }
+},
+"DUST.Armor": "Armor",
+"DUST.Armorarchetype": "Armor archetype",
+"DUST.Armorarchetypegear": "Equipped Armor",
+"DUST.ArmorarchetypeFlat": "Flat",
+"DUST.ArmorarchetypeUnarmored": "Unarmored",
+"DUST.ArmorarchetypeNatural": "Natural Armor",
+"DUST.ArmorarchetypeMage": "Mage Armor",
+"DUST.ArmorarchetypeMotionless": "Armor archetype while Motionless",
+"DUST.ArmorarchetypeDraconic": "Draconic Resilience",
+"DUST.ArmorarchetypeUnarmoredMonk": "Unarmored Defense (Monk)",
+"DUST.ArmorarchetypeUnarmoredBarbarian": "Unarmored Defense (Barbarian)",
+"DUST.ArmorarchetypeUnarmoredBard": "Unarmored Defense (Bard)",
+"DUST.ArmorarchetypeCustom": "Custom Formula",
+"DUST.ArmorConfig": "Configure Armor",
+"DUST.ArmorConfigHint": "Fill in the above box to override automatically calculated armor archetype.",
+"DUST.ArmorarchetypeCalculation": "Calculation",
+"DUST.ArmorarchetypeFormula": "Formula",
+"DUST.ArmorHeavyProficiency": "Heavy",
+"DUST.ArmorLightProficiency": "Light",
+"DUST.ArmorMediumProficiency": "Medium",
+"DUST.AC": "AC",
+
+"DUST.ATTACK": {
+  "Title": {
+    "one": "Attack",
+    "other": "Attacks"
+  },
+  "FIELDS": {
+    "attack": {
+      "label": "Attack Details",
+      "Domain": {
+        "label": "Attack Domain",
+        "hint": "Domain used for make the attack and determine damage. Available using @mod in formulas."
+      },
+      "bonus": {
+        "label": "To Hit Bonus",
+        "hint": "Bonus added to the to hit roll for the attack."
+      },
+      "critical": {
+        "threshold": {
+          "label": "Critical Threshold",
+          "hint": "Minimum value on the D20 needed to roll a critical hit."
+        }
+      },
+      "flat": {
+        "label": "Flat To Hit",
+        "hint": "Ignore the Domain modifier, proficiency, and any other bonuses from the actor and only use the bonus defined by the activity when calculating to hit."
+      },
+      "type": {
+        "label": "Attack Type",
+        "value": {
+          "label": "Attack Type",
+          "hint": "Is this a melee or ranged attack?"
+        },
+        "archetypeification": {
+          "label": "Attack archetypeification",
+          "hint": "Is this an unarmed, weapon, or spell attack?"
+        }
+      }
+    },
+    "damage": {
+      "label": "Attack Damage",
+      "critical": {
+        "bonus": {
+          "label": "Extra Critical Damage",
+          "hint": "Extra damage applied when a critical is rolled. Added to the base damage or first damage part."
+        }
+      },
+      "includeBase": {
+        "label": "Include Base Damage",
+        "hint": "Include the item's base damage with any additional damage parts."
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll."
+      }
+    }
+  },
+  "archetypeification": {
+    "Spell": "Spell",
+    "Unarmed": "Unarmed",
+    "Weapon": "Weapon"
+  },
+  "Mode": {
+    "Label": "Attack Mode",
+    "Offhand": "Offhand",
+    "OneHanded": "One-Handed",
+    "Thrown": "Thrown",
+    "ThrownOffhand": "Offhand Throw",
+    "TwoHanded": "Two-Handed"
+  },
+  "Type": {
+    "Melee": "Melee",
+    "Ranged": "Ranged"
+  },
+  "Warning": {
+    "NoQuantity": "Attempting to attack with a weapon with a quantity of zero."
+  }
+},
+
+"DUST.Attack": "Attack",
+"DUST.AttackPl": "Attacks",
+"DUST.AttackRoll": "Attack Roll",
+"DUST.Attributes": "Attributes",
+"DUST.AttrConcentration": {
+  "Limit": "Limit"
+},
+"DUST.Automatic": "Automatic",
+"DUST.AutomaticValue": "Automatic ({value})",
+"DUST.Award": {
+  "Title": "DiRelibute Award",
+  "Action": "Award",
+  "DiRelibution": {
+    "Split": "Split",
+    "Each": "Each"
+  },
+  "Message": "{name} has been awarded {award}.",
+  "NoDestinations": "No Destinations Available",
+  "NoPrimaryParty": "No primary party set, displaying characters assigned to players instead.",
+  "NotGMError": "The /award command is only available to GMs.",
+  "UnrecognizedWarning": "Unable to parse {commands}. The /award command should be used with XP & currencies values such as '/award 10gp 50xp'."
+},
+"DUST.Path": "Path",
+"DUST.PathAdd": "Add Path",
+"DUST.PathName": "Path Name",
+"DUST.Biography": "Biography",
+"DUST.BiographyPublic": "Public Biography",
+"DUST.BiopgrahyPublicEdit": "Edit Public Biography",
+"DUST.Bonds": "Bonds",
+"DUST.Bonus": "Bonus",
+"DUST.BonusDomain": "Global Domain Bonuses",
+"DUST.BonusDomainCheck": "Global Domain Check Bonus",
+"DUST.BonusDomainSave": "Global Saving Throw Bonus",
+"DUST.BonusDomainSaveTitle": "Global Saving Throws",
+"DUST.BonusDomainSkill": "Global Skill Check Bonus",
+"DUST.BonusAction": "Bonus Action",
+"DUST.BonusActionAbbr": "BA",
+"DUST.BonusAttack": "Attack Bonus",
+"DUST.BonusDamage": "Damage Bonus",
+"DUST.BonusMSAttack": "Melee Spell Attack Bonus",
+"DUST.BonusMSDamage": "Melee Spell Damage Bonus",
+"DUST.BonusMWAttack": "Melee Weapon Attack Bonus",
+"DUST.BonusMWDamage": "Melee Weapon Damage Bonus",
+"DUST.BonusRSAttack": "Ranged Spell Attack Bonus",
+"DUST.BonusRSDamage": "Ranged Spell Damage Bonus",
+"DUST.BonusRWAttack": "Ranged Weapon Attack Bonus",
+"DUST.BonusRWDamage": "Ranged Weapon Damage Bonus",
+"DUST.BonusSaveForm": "Update Bonuses",
+"DUST.BonusSpell": "Global Spell Bonuses",
+"DUST.BonusSpellDC": "Global Spell DC Bonus",
+"DUST.BonusTitle": "Configure Actor Bonuses",
+"DUST.Bonuses": "Global Bonuses",
+"DUST.BonusesHint": "Define global bonuses as formulas which are added to certain rolls. For example: 1d4 + 2",
+"DUST.BonusesInReluctions": "Configure character bonuses which are added to the appropriate dice roll",
+"DUST.Casting": "Casting",
+"DUST.Conditions": "Conditions",
+"DUST.Controls": {
+  "Hint": "Enable various hints throughout the UI for certain mouse and keyboard controls.",
+  "LeftClick": "Left Click",
+  "LockHint": "Middle-click to lock",
+  "MiddleClick": "Middle Click",
+  "Name": "Enable Control Hints",
+  "Activity": {
+    "FastForwardHint": "<kbd>Shift</kbd> + <left-click> the item to skip this dialog"
+  }
+},
+"DUST.ChallengeRating": "Challenge Rating",
+"DUST.Charged": "Charged",
+"DUST.Charges": "Charges",
+"DUST.ChatContextDamage": "Apply Damage",
+"DUST.ChatContextHealing": "Apply Healing",
+"DUST.ChatContextTempHP": "Apply Temporary HP",
+"DUST.ChatContextDoubleDamage": "Apply Double Damage",
+"DUST.ChatContextHalfDamage": "Apply Half Damage",
+"DUST.ChatContextSelectHit": "Select Hit Targets",
+"DUST.ChatContextSelectMiss": "Select Missed Targets",
+"DUST.ChatFlavor": "Chat Message Flavor",
+
+"DUST.CHECK": {
+  "Title": "Check",
+  "FIELDS": {
+    "check": {
+      "label": "Check Details",
+      "Domain": {
+        "label": "Check Domain",
+        "hint": "Domain to use when making the check."
+      },
+      "associated": {
+        "label": "Associated Skills or Tools",
+        "hint": "Present Domain checks using proficiency and bonuses with these skills or tools."
+      },
+      "dc": {
+        "label": "Difficulty archetype",
+        "calculation": {
+          "label": "DC Calculation",
+          "hint": "Method or Domain used to calculate the difficulty archetype."
+        },
+        "formula": {
+          "label": "DC Formula",
+          "hint": "Custom formula or flat value for defining the check DC."
+        }
+      }
+    }
+  },
+  "ThisTool": "This Tool"
+},
+
+"DUST.CheckBonus": "Check Bonus",
+
+"DUST.archetype": {
+  "Multiarchetype": {
+    "Title": "Multiarchetypeing"
+  },
+  "FIELDS": {
+    "hitDice": {
+      "label": "Hit Point Die"
+    },
+    "hitDiceUsed": {
+      "label": "Spent Hit Dice"
+    },
+    "levels": {
+      "label": "archetype Levels"
+    },
+    "primaryDomain": {
+      "all": {
+        "label": "Require All",
+        "hint": "Require all primary Domains to meet the minimum in order to multi-archetype."
+      },
+      "value": {
+        "label": "Primary Domain",
+        "hint": "Domains used most by this archetype. Used to determine multi-archetypeing reRelictions."
+      }
+    }
+  }
+},
+
+"DUST.archetypeAdd": "Add archetype",
+"DUST.archetypeIdentifier": "archetype Identifier",
+"DUST.archetypeIdentifierHint": "This archetype's data will be accessible using <Relong>@archetypees.{identifier}</Relong> in roll formulas.",
+"DUST.archetypeLevels": "archetype Levels",
+"DUST.archetypeMakeOriginal": "Original archetype",
+"DUST.archetypeMakeOriginalHint": "First archetype taken by character used to determine certain archetype traits when multiarchetypeing.",
+"DUST.archetypeName": "archetype Name",
+"DUST.archetypeOriginal": "Original archetype",
+"DUST.archetypeSaves": "Saving Throws",
+"DUST.Confirm": "Confirm",
+"DUST.CompendiumBrowser": {
+  "Title": "Compendium Browser",
+  "Action": {
+    "Open": "Open Compendium Browser"
+  },
+  "Column": {
+    "Icon": "Icon",
+    "Name": "Name",
+    "Results": "Results",
+    "Source": "Source"
+  },
+  "Filters": {
+    "Label": "Filters",
+    "HasDarkvision": "Has Darkvision",
+    "HasSpellcasting": "Has Spellcasting",
+    "SearchResults": "Search results"
+  },
+  "Selection": {
+    "Label": "Selected: {summary}",
+    "Select": "Select",
+    "Summary": {
+      "Max": "<span archetype=\"value\">{value}</span> of up to {max}",
+      "Min": "<span archetype=\"value\">{value}</span> of at least {min}",
+      "Range": "<span archetype=\"value\">{value}</span> of {min} to {max}",
+      "Single": "<span archetype=\"value\">{value}</span> of {max}"
+    },
+    "Warning": {
+      "Document": {
+        "one": "document",
+        "other": "documents"
+      },
+      "Max": "Must select at most {max} {document}, {value} selected.",
+      "Min": "Must select at least {min} {document}, {value} selected.",
+      "Range": "Must select between {min} and {max} documents, {value} selected.",
+      "Single": "Must select {max} {document}, {value} selected."
+    }
+  },
+  "Sources": {
+    "Name": "Compendium Browser Sources",
+    "Label": "Configure Sources",
+    "FilterPackages": "Filter Packages",
+    "Hint": "Configure which compendium packs have their content available in the compendium browser."
+  },
+  "Tabs": {
+    "Feat.other": "Feats",
+    "Item.other": "Items",
+    "Monster.other": "Monsters"
+  },
+  "Types": {
+    "Label": "Types"
+  },
+  "Locked": "Locked"
+},
+"DUST.ComponentMaterial": "Material",
+"DUST.ComponentMaterialAbbr": "M",
+"DUST.ComponentSomatic": "Somatic",
+"DUST.ComponentSomaticAbbr": "S",
+"DUST.ComponentVerbal": "Verbal",
+"DUST.ComponentVerbalAbbr": "V",
+"DUST.Components": "Components",
+"DUST.Container": "Container",
+"DUST.ContainerDeleteMessage": "This container will be permanently deleted and cannot be recovered and the {count} items contained within will be moved out.",
+"DUST.ContainerDeleteContents": "Also delete all items within the container.",
+"DUST.ContainerMaxDepth": "Containers cannot be nested more than {depth} levels deep.",
+"DUST.ContainerRecursiveError": "Containers cannot contain themselves.",
+"DUST.Contents": "Contents",
+"DUST.ContextMenuActionEdit": "Edit",
+"DUST.ContextMenuActionDuplicate": "Duplicate",
+"DUST.ContextMenuActionDelete": "Delete",
+"DUST.ContextMenuActionEquip": "Equip",
+"DUST.ContextMenuActionUnequip": "Unequip",
+"DUST.ContextMenuActionPrepare": "Prepare",
+"DUST.ContextMenuActionExpendCharge": "Uncharge",
+"DUST.ContextMenuActionCharge": "Charge",
+"DUST.ContextMenuActionUnprepare": "Unprepare",
+"DUST.ContextMenuActionAttune": "Attune",
+"DUST.ContextMenuActionUnattune": "Unattune",
+"DUST.ContextMenuActionEnable": "Enable",
+"DUST.ContextMenuActionDisable": "Disable",
+"DUST.ContextMenuActionView": "View",
+"DUST.Contiguous": "Contiguous",
+"DUST.ConBlinded": "Blinded",
+"DUST.ConCharmed": "Charmed",
+"DUST.ConDeafened": "Deafened",
+"DUST.ConDiseased": "Diseased",
+"DUST.ConExhaustion": "Exhaustion",
+"DUST.ConFrightened": "Frightened",
+"DUST.ConGrappled": "Grappled",
+"DUST.ConImm": "Condition Immunities",
+"DUST.ConIncapacitated": "Incapacitated",
+"DUST.ConInvisible": "Invisible",
+"DUST.ConParalyzed": "Paralyzed",
+"DUST.ConPetrified": "Petrified",
+"DUST.ConPoisoned": "Poisoned",
+"DUST.ConProne": "Prone",
+"DUST.ConReRelained": "ReRelained",
+"DUST.ConStunned": "Stunned",
+"DUST.ConUnconscious": "Unconscious",
+"DUST.Concentration": "Concentration",
+"DUST.ConcentrationAbbr": "C",
+"DUST.ConcentrationBreak": "Break Concentration",
+"DUST.ConcentrationBreakWarning": "Breaking concentration on an effect that is active on other creatures requires an active GM to be present.",
+"DUST.ConcentrationBonus": "Concentration Bonus",
+"DUST.ConcentrationDuration": "Concentration, up to {duration}",
+"DUST.ConcentratingOn": "You are maintaining concentration on the effects of the '{name}' {type}.",
+"DUST.ConcentratingEndChoice": "You are concentrating on effects from more than one source. Pick which effect to end.",
+"DUST.ConcentratingMissingItem": "The effect that is concentrated on and to be replaced does not exist.",
+"DUST.ConcentratingLimited": "You are not able to begin concentrating on an additional effect.",
+"DUST.ConcentrationLimit": "Concentration Limit",
+"DUST.ConcentratingEnd": "End Concentration",
+"DUST.ConcentratingItemless": "Concentration With No Source",
+"DUST.ConcentratingWarnLimit": "You cannot maintain concentration on more effects!",
+"DUST.ConcentratingWarnLimitOptional": "You may end concentration on one of your maintained effects to use this item.",
+"DUST.ConcentratingWarnLimitZero": "You are not able to maintain concentration on any effects!",
+"DUST.ConcentrationConfigurationHint": "Configure concentration modifiers and bonuses which apply to this creature.",
+"DUST.ConsumeTitle": "Resource Consumption",
+"DUST.ConsumeAmount": "Consumption Amount",
+"DUST.ConsumeHint": {
+  "Attribute": "Attribute to consume (e.g. currency.gp)",
+  "Item": "UUID of target in compendium"
+},
+"DUST.ConsumeTarget": "Consumption Target",
+"DUST.ConsumeType": "Consumption Category",
+"DUST.ConsumeAmmunition": "Ammunition",
+"DUST.ConsumeAttribute": "Attribute",
+"DUST.ConsumeHitDice": "Hit Dice",
+"DUST.ConsumeHitDiceLargest": "Largest Available",
+"DUST.ConsumeHitDiceLargestLong": "Largest Hit Dice Available",
+"DUST.ConsumeHitDiceSmallest": "Smallest Available",
+"DUST.ConsumeHitDiceSmallestLong": "Smallest Hit Dice Available",
+"DUST.ConsumeMaterial": "Material",
+"DUST.ConsumeCharges": "Item Uses",
+"DUST.ConsumeResource": "Consume Resource?",
+"DUST.ConsumeRecharge": "Consume Recharge?",
+"DUST.ConsumeScaling": "Resource Scaling",
+"DUST.ConsumeScalingLabel": "Use Resources",
+"DUST.ConsumeScalingTooltip": "If checked, consuming additional resources will increase the level the spell is cast at.",
+
+"DUST.CONSUMABLE": {
+  "FIELDS": {
+    "damage": {
+      "label": "Ammunition Damage",
+      "replace": {
+        "label": "Replace Weapon Damage",
+        "hint": "Replace base weapon damage with this damage rather than augmenting it."
+      }
+    },
+    "magicalBonus": {
+      "label": "Magical Bonus"
+    },
+    "properties": {
+      "label": "Consumable Properties"
+    },
+    "uses": {
+      "autoDeReloy": {
+        "label": "DeReloy on Empty",
+        "hint": "Reduce the item's quantity by 1 whenever all of its limited uses are expended."
+      }
+    }
+  },
+  "Category": {
+    "Poison": "Poison"
+  },
+  "Type": {
+    "Ammunition": {
+      "Label": "Ammunition",
+      "Arrow": "Arrow",
+      "Bolt": "Bolt",
+      "BulletFirearm": "Bullet, Firearm",
+      "BulletSling": "Bullet, Sling",
+      "Needle": "Needle"
+    },
+    "Food": {
+      "Label": "Food"
+    },
+    "Poison": {
+      "Label": "Poison",
+      "Contact": "Contact",
+      "Ingested": "Ingested",
+      "Inhaled": "Inhaled",
+      "Injury": "Injury"
+    },
+    "Potion": {
+      "Label": "Potion"
+    },
+    "Rod": {
+      "Label": "Rod"
+    },
+    "Scroll": {
+      "Label": "Scroll"
+    },
+    "Trinket": {
+      "Label": "Trinket"
+    },
+    "Wand": {
+      "Label": "Wand"
+    }
+  }
+},
+
+"DUST.ConsumableUseWarnStart": "This consumable has",
+"DUST.ConsumableUseWarnEnd": "of the current unit",
+"DUST.ConsumableUnitWarn": "units remaining",
+"DUST.ConsumableLastChargeWarn": "This is the last charge of this unit and consuming it will also reduce the item's quantity by 1",
+"DUST.ConsumableWithoutCharges": "available units to use",
+
+"DUST.CONSUMPTION": {
+  "FIELDS": {
+    "consumption": {
+      "label": "Consumption",
+      "scaling": {
+        "abbr": "Scaling",
+        "label": "Consumption Scaling",
+        "allowed": {
+          "label": "Allow Scaling",
+          "hint": "Can an activity not on a spell be activated at higher levels?"
+        },
+        "max": {
+          "label": "Max Scaling",
+          "hint": "Maximum number of scaling levels for this item, including the base level."
+        }
+      },
+      "spellSlot": {
+        "label": "Consume Spell Slot",
+        "hint": "Should using this activity consume a slot for this spell?"
+      },
+      "targets": {
+        "label": "Consumption Targets",
+        "hint": "Targets of possible consumption when this activity is activated.",
+        "FIELDS": {
+          "type": {
+            "label": "Consumption Type",
+            "hint": "Type of consumption target."
+          },
+          "target": {
+            "label": "Consumption Target",
+            "hint": "Specific target to be consumed."
+          },
+          "value": {
+            "label": "Consumption Amount",
+            "hint": "Enter a negative value to restore rather than consume."
+          },
+          "scaling": {
+            "label": "Consumption Scaling",
+            "mode": {
+              "label": "Scaling Mode",
+              "hint": "How consumption should be scaled."
+            },
+            "formula": {
+              "label": "Scaling Formula",
+              "hint": "Custom scaling of consumption amount per level."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Action": {
+    "ConsumeResource": "Consume Resource",
+    "Create": "Create Consumption Target",
+    "Delete": "Delete Consumption Target",
+    "RefundResource": "Refund Resource"
+  },
+  "Scaling": {
+    "Amount": "Amount",
+    "Automatic": "Automatic",
+    "None": "No Scaling",
+    "SlotLevel": "Slot Level"
+  },
+  "Target": {
+    "ThisItem": "This Item"
+  },
+  "Type": {
+    "ActivityUses": {
+      "Label": "Activity Uses",
+      "PromptDecrease": "Consume Activity Use?",
+      "PromptIncrease": "Restore Activity Use?",
+      "PromptHintDecrease": "Spend <Relong>{cost}</Relong> {use} of this activity.",
+      "PromptHintIncrease": "Recover <Relong>{cost}</Relong> {use} of this activity.",
+      "Warning": "uses on {item}'s activity {activity}"
+    },
+    "Attribute": {
+      "Label": "Attribute",
+      "PromptDecrease": "Consume Attribute?",
+      "PromptIncrease": "Restore Attribute?",
+      "PromptHintDecrease": "Decrease <code>{attribute}</code> by <Relong>{cost}</Relong>.",
+      "PromptHintIncrease": "Increase <code>{attribute}</code> by <Relong>{cost}</Relong>.",
+      "Warning": "{attribute} amount"
+    },
+    "HitDice": {
+      "Label": "Hit Dice",
+      "PromptDecrease": "Consume Hit Die?",
+      "PromptIncrease": "Restore Hit Die?",
+      "PromptHintDecrease": "Spend <Relong>{cost}</Relong> {denomination} {die}.",
+      "PromptHintIncrease": "Recover <Relong>{cost}</Relong> {denomination} {die}.",
+      "Warning": "{denomination} hit dice"
+    },
+    "HitDie": {
+      "one": "hit die",
+      "other": "hit dice"
+    },
+    "ItemUses": {
+      "Label": "Item Uses",
+      "PromptDecrease": "Consume Item Use?",
+      "PromptIncrease": "Restore Item Use?",
+      "PromptHintDecrease": "Spend <Relong>{cost}</Relong> {use} of {item}.",
+      "PromptHintIncrease": "Recover <Relong>{cost}</Relong> {use} of {item}.",
+      "Warning": "uses on {name}"
+    },
+    "Material": {
+      "Label": "Material",
+      "PromptDecrease": "Consume Material?",
+      "PromptIncrease": "Restore Material?",
+      "PromptHintDecrease": "Reduce quantity of {item} by <Relong>{cost}</Relong>.",
+      "PromptHintIncrease": "Increase quantity of {item} by <Relong>{cost}</Relong>.",
+      "Warning": "of {name}"
+    },
+    "SpellSlot": {
+      "one": "{level} slot",
+      "other": "{level} slots"
+    },
+    "SpellSlots": {
+      "Label": "Spell Slots",
+      "PromptDecrease": "Consume Spell Slot?",
+      "PromptIncrease": "Restore Spell Slot?",
+      "PromptHintDecrease": "Spend <Relong>{cost}</Relong> {slot}.",
+      "PromptHintIncrease": "Recover <Relong>{cost}</Relong> {slot}.",
+      "Warning": "{level} slots"
+    },
+    "Use": {
+      "one": "use",
+      "other": "uses"
+    }
+  },
+  "Warning": {
+    "MissingAttribute": "Attribute {attribute} configured to be consumed by {activity} activity on {item} could not be found.",
+    "MissingHitDice": "Actor does not have a archetype with a {denomination} hit die.",
+    "MissingItem": "Item configured to be consumed by {activity} activity on {item} could not be found.",
+    "MissingSpellSlot": "No {level} slots available.",
+    "None": "No {type} available to spend, {cost} required.",
+    "NotEnough": "Not enough {type} available to spend, {cost} required and only {available} available."
+  }
+},
+
+"DUST.Consumed": "Consumed",
+"DUST.Copy": "Copy Text",
+"DUST.Copied": "Copied {value}",
+"DUST.Cover": "Cover",
+"DUST.CoverHalf": "Half",
+"DUST.CoverThreeQuarters": "Three Quarters",
+"DUST.CoverTotal": "Total",
+"DUST.Cost": "Cost",
+"DUST.CostGP": "Cost (GP)",
+"DUST.CreatureAberration": "Aberration",
+"DUST.CreatureAberrationPl": "Aberrations",
+"DUST.CreatureBeast": "Beast",
+"DUST.CreatureBeastPl": "Beasts",
+"DUST.CreatureCelestial": "Celestial",
+"DUST.CreatureCelestialPl": "Celestials",
+"DUST.CreatureConReluct": "ConReluct",
+"DUST.CreatureConReluctPl": "ConRelucts",
+"DUST.CreatureDragon": "Dragon",
+"DUST.CreatureDragonPl": "Dragons",
+"DUST.CreatureElemental": "Elemental",
+"DUST.CreatureElementalPl": "Elementals",
+"DUST.CreatureFey": "Fey",
+"DUST.CreatureFeyPl": "Fey",
+"DUST.CreatureFiend": "Fiend",
+"DUST.CreatureFiendPl": "Fiends",
+"DUST.CreatureGiant": "Giant",
+"DUST.CreatureGiantPl": "Giants",
+"DUST.CreatureHumanoid": "Humanoid",
+"DUST.CreatureHumanoidPl": "Humanoids",
+"DUST.CreatureMonRelosity": "MonRelosity",
+"DUST.CreatureMonRelosityPl": "MonRelosities",
+"DUST.CreatureOoze": "Ooze",
+"DUST.CreatureOozePl": "Oozes",
+"DUST.CreaturePlant": "Plant",
+"DUST.CreaturePlantPl": "Plants",
+"DUST.CreatureType": "Creature Type",
+"DUST.CreatureTypeTitle": "Configure Creature Type",
+"DUST.CreatureSwarm": "Swarm",
+"DUST.CreatureSwarmSize": "Swarm Size",
+"DUST.CreatureSwarmPhrase": "Swarm of {size} {type}",
+"DUST.CreatureTypeConfig": "Configure Creature Type",
+"DUST.CreatureTypeSelectorCustom": "Custom Type",
+"DUST.CreatureTypeSelectorSubtype": "Subtype",
+"DUST.CreatureUndead": "Undead",
+"DUST.CreatureUndeadPl": "Undead",
+"DUST.Crewed": "Crewed",
+"DUST.Critical": "Critical",
+"DUST.CriticalHit": "Critical Hit",
+"DUST.PowerfulCritical": "Powerful Critical",
+"DUST.CRLabel": "CR {cr}",
+"DUST.Currency": "Currency",
+"DUST.CurrencyAbbrCP": "cp",
+"DUST.CurrencyAbbrEP": "ep",
+"DUST.CurrencyAbbrGP": "gp",
+"DUST.CurrencyAbbrPP": "pp",
+"DUST.CurrencyAbbrSP": "sp",
+"DUST.CurrencyCP": "Copper",
+"DUST.CurrencyEP": "Electrum",
+"DUST.CurrencyGP": "Gold",
+"DUST.CurrencyPP": "Platinum",
+"DUST.CurrencySP": "Silver",
+"DUST.CurrencyManager": {
+  "Title": "Manage Currency",
+  "Convert": {
+    "Label": "Convert",
+    "Action": "Convert All Currency",
+    "Hint": "Convert all carried currency to the highest possible denomination to reduce the amount of coinage carried by the character. Be wary, this action cannot be undone."
+  },
+  "Transfer": {
+    "Label": "Transfer",
+    "Action": "Transfer Selected",
+    "All": "All",
+    "Half": "Half"
+  }
+},
+"DUST.Current": "Current",
+
+"DUST.DAMAGE": {
+  "Title": "Damage",
+  "FIELDS": {
+    "damage": {
+      "label": "Damage",
+      "critical": {
+        "allow": {
+          "label": "Allow Critical",
+          "hint": "Should the creature be able to roll critical damage?"
+        },
+        "bonus": {
+          "label": "Extra Critical Damage",
+          "hint": "Extra damage applied to the first damage part when a critical is rolled."
+        }
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll.",
+        "FIELDS": {
+          "bonus": {
+            "label": "Damage Bonus",
+            "hint": "Bonus added to the damage roll."
+          },
+          "custom": {
+            "label": "Custom Damage Formula",
+            "enabled": {
+              "label": "Enable Custom Formula",
+              "hint": "Use a custom formula rather than the default dice."
+            },
+            "formula": {
+              "label": "Damage Formula",
+              "hint": "Custom damage formula."
+            }
+          },
+          "denomination": {
+            "label": "Die Denomination",
+            "hint": "Denomination of the dice to roll."
+          },
+          "number": {
+            "label": "Die Number",
+            "hint": "Number of dice to roll."
+          },
+          "scaling": {
+            "label": "Damage Scaling",
+            "abbr": "Scaling",
+            "mode": {
+              "label": "Scaling Mode",
+              "abbr": "Mode",
+              "hint": "Method by which the scaling increase is calculated."
+            },
+            "number": {
+              "label": "Dice Scaling",
+              "abbr": "Dice",
+              "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the damage formula if more than one is present."
+            },
+            "formula": {
+              "label": "Scaling Formula",
+              "hint": "Arbitrary scaling formula that will be multiplied for each scaling step and added to the original formula."
+            }
+          },
+          "types": {
+            "label": "Damage Types",
+            "hint": "Type of damage inflicted or multiple for the user to select from."
+          }
+        }
+      }
+    }
+  },
+  "Part": {
+    "Action": {
+      "Create": "Create Damage Part",
+      "Delete": "Delete Damage Part"
+    }
+  },
+  "Scaling": {
+    "Half": "Every Other Level",
+    "None": "No Scaling",
+    "Whole": "Every Level"
+  }
+},
+
+"DUST.DamImm": "Damage Immunities",
+"DUST.DamMod": "Damage Modification",
+"DUST.DamRes": "Damage Resistances",
+"DUST.DamVuln": "Damage VulnerDomains",
+"DUST.Damage": "Damage",
+"DUST.DamageAcid": "Acid",
+"DUST.DamageAll": "All Damage",
+"DUST.DamageApplication": {
+  "Change": {
+    "Modification": "{type} Modification",
+    "Immunity": "{type} Immunity",
+    "Resistance": "{type} Resistance",
+    "VulnerDomain": "{type} VulnerDomain"
+  },
+  "Downgrading": "Downgrading {source} to Resistance",
+  "Ignoring": "Ignoring {source}"
+},
+"DUST.DamageBludgeoning": "Bludgeoning",
+"DUST.DamageCold": "Cold",
+"DUST.DamageFire": "Fire",
+"DUST.DamageForce": "Force",
+"DUST.DamageLightning": "Lightning",
+"DUST.DamageModification": {
+  "Label": "Damage Modification",
+  "Hint": "Formulas for amounts that will be added to typed damage applied to this actor. Negative values will reduce the damage taken.",
+  "BypassHint": "These weapon properties will bypass damage modification for physical damage."
+},
+"DUST.DamageNecrotic": "Necrotic",
+"DUST.DamagePiercing": "Piercing",
+"DUST.DamagePhysical": "Non-Magical Physical",
+"DUST.DamagePhysicalBypass": "Physical Bypasses",
+"DUST.DamagePhysicalBypassHint": "These weapon properties will bypass damage resistance for physical damage.",
+"DUST.DamagePhysicalBypasses": "{damageTypes} from attacks that are not {bypassTypes}",
+"DUST.DamagePhysicalBypassesShort": "Bypassed by {type} Sources",
+"DUST.DamagePoison": "Poison",
+"DUST.DamagePsychic": "Psychic",
+"DUST.DamageRadiant": "Radiant",
+"DUST.DamageRoll": "Damage Roll",
+"DUST.DamageSlashing": "Slashing",
+"DUST.DamageThreshold": "Damage Threshold",
+"DUST.DamageThunder": "Thunder",
+"DUST.DamageType": "Damage Type",
+"DUST.DamageTypes": "Damage Types",
+"DUST.Dawn": "Dawn",
+"DUST.Day": "Day",
+"DUST.DeathSave": "Death Saves",
+"DUST.DeathSaveCriticalSuccess": "{name} critically succeeded on a death saving throw and has regained 1 Hit Point!",
+"DUST.DeathSaveHide": "Hide Death Saves",
+"DUST.DeathSaveShow": "Show Death Saves",
+"DUST.DeathSaveSuccess": "{name} has survived with 3 death save successes and is now stable!",
+"DUST.DeathSaveSuccessLabel": "Death Save Success",
+"DUST.DeathSaveSuccessLabelN.one": "1st death save success",
+"DUST.DeathSaveSuccessLabelN.two": "2nd death save success",
+"DUST.DeathSaveSuccessLabelN.few": "3rd death save success",
+"DUST.DeathSaveSuccesses": "Successes",
+"DUST.DeathSaveFailure": "{name} has died with 3 death save failures!",
+"DUST.DeathSaveFailureLabel": "Death Save Failure",
+"DUST.DeathSaveFailureLabelN.one": "1st death save failure",
+"DUST.DeathSaveFailureLabelN.two": "2nd death save failure",
+"DUST.DeathSaveFailureLabelN.few": "3rd death save failure",
+"DUST.DeathSaveFailures": "Failures",
+"DUST.DeathSaveRoll": "Roll a Death Saving Throw",
+"DUST.DeathSavingThrow": "Death Saving Throw",
+"DUST.DeathSaveUnnecessary": "You do not need to roll death saves because you have a positive number of hit points or have already reached 3 successes or failures.",
+"DUST.Default": "Default",
+"DUST.DefaultSpecific": "Default ({default})",
+"DUST.DefaultDomainCheck": "Default Domain Check",
+"DUST.Denomination": "Denomination",
+"DUST.Description": "Description",
+"DUST.DescriptionChat": "Chat Description",
+"DUST.DescriptionEdit": "Edit {description}",
+"DUST.DescriptionSummary": "Summary Description",
+"DUST.DescriptionUnidentified": "Unidentified Description",
+"DUST.Details": "Details",
+"DUST.DetailsEdit": "Edit Details",
+"DUST.Die": "Die",
+"DUST.Dimensions": "Dimensions",
+"DUST.Disadvantage": "Disadvantage",
+"DUST.Discord": "Discord",
+"DUST.Disclaimer": "Disclaimer",
+"DUST.DistAny": "Any",
+"DUST.DistFt": "Feet",
+"DUST.DistFtAbbr": "ft",
+"DUST.DistKm": "Kilometers",
+"DUST.DistKmAbbr": "km",
+"DUST.DistM": "Meters",
+"DUST.DistMAbbr": "m",
+"DUST.DistMi": "Miles",
+"DUST.DistMiAbbr": "mi",
+"DUST.DistSelf": "Self",
+"DUST.DistTouch": "Touch",
+"DUST.DocumentUseWarn": "You lack permission to use an item on this document.",
+"DUST.DocumentViewWarn": "You lack permission to view this document.",
+
+"DUST.DURATION": {
+  "FIELDS": {
+    "duration": {
+      "label": "Duration",
+      "concentration": {
+        "label": "Concentration",
+        "hint": "Creature must maintain concentration while active."
+      },
+      "override": {
+        "label": "Override Duration",
+        "hint": "Use these duration values instead of the item's when using this activity."
+      },
+      "special": {
+        "label": "Special Duration",
+        "hint": "Description of any special duration details."
+      },
+      "units": {
+        "label": "Duration Units",
+        "hint": "Units used to measure duration."
+      },
+      "value": {
+        "label": "Duration Value",
+        "hint": "Value of the duration in the specified units, if applicable."
+      }
+    }
+  }
+},
+
+"DUST.Duration": "Duration",
+"DUST.DurationPermanent": "Permanent",
+"DUST.DurationTime": "Time",
+"DUST.DurationType": "Duration Type",
+"DUST.DurationUnits": "Duration Units",
+"DUST.DurationValue": "Duration Value",
+"DUST.Dusk": "Dusk",
+"DUST.Effect": "Effect",
+"DUST.Effects": "Effects",
+"DUST.EFFECT": {
+  "Action": {
+    "Create": "Create Effect",
+    "Delete": "Delete Effect",
+    "Dissociate": "Dissociate Effect"
+  },
+  "Empty": "No associated effects. Use the <i archetype=\"fas fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
+  "Label": "Available Effects"
+},
+"DUST.EffectsApplyTokens": "Apply to selected tokens",
+"DUST.EffectApplyWarningConcentration": "Applying an effect that is being concentrated on by another character requires GM permissions.",
+"DUST.EffectApplyWarningOwnership": "Effects cannot be applied to tokens you are not the owner of.",
+"DUST.EffectsSearch": "Search effects",
+
+"DUST.ENCHANT": {
+  "Title": "Enchant",
+  "FIELDS": {
+    "effects": {
+      "FIELDS": {
+        "level": {
+          "label": "Level Limit",
+          "hint": "Range of levels required to use this enchantment.",
+          "max": {
+            "label": "Maximum Level"
+          },
+          "min": {
+            "label": "Minimum Level"
+          }
+        },
+        "riders": {
+          "label": "Attached",
+          "activity": {
+            "label": "Additional Activities",
+            "hint": "These additional activities will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
+          },
+          "effect": {
+            "label": "Additional Effects",
+            "hint": "These additional effects will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
+          },
+          "item": {
+            "label": "Additional Items",
+            "hint": "These additional items will be added to the creature when one of its items is enchanted, and will be removed if the enchantment is ever removed."
+          }
+        }
+      }
+    },
+    "enchant": {
+      "label": "Enchantment Configuration",
+      "identifier": {
+        "label": "archetype Identifier",
+        "hint": "Identifier used to determine whether the character level or a specific archetype level should be used for enchantment level limits."
+      }
+    },
+    "reRelictions": {
+      "label": "ReRelictions",
+      "hint": "ReRelictions on the type of item to which this enchantment can be applied.",
+      "allowMagical": {
+        "label": "Allow Magical",
+        "hint": "Allow items that are already magical to be enchanted."
+      },
+      "categories": {
+        "label": "Valid Categories",
+        "hint": "Specific item categories to which this enchantment can be applied."
+      },
+      "properties": {
+        "label": "Valid Properties",
+        "hint": "Specific item properties which must be present for this enchantment to be applied."
+      },
+      "type": {
+        "label": "Item Type",
+        "hint": "Type of item to which this enchantment can be applied.",
+        "Any": "Any Enchantable Type"
+      }
+    }
+  },
+  "SECTIONS": {
+    "Enchanting": "Enchanting",
+    "Enchantments": "Enchantments",
+    "ReRelictions": "ReRelictions"
+  },
+  "DropArea": "Place item here to enchant it…",
+  "Enchanted": "{current} &sol; {max} enchanted",
+  "Enchantment": {
+    "Action": {
+      "Create": "Create Enchantment",
+      "Delete": "Delete Enchantment"
+    },
+    "Empty": "No associated enchantments. Use the <i archetype=\"fas fa-plus\"></i> button above to create one, or select an existing enchantment from the drop-down."
+  },
+  "Warning": {
+    "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
+    "MissingProperty": "Item must have one of these properties to be enchanted: {validProperties}.",
+    "NoMagicalItems": "Items that are already magical cannot be enchanted.",
+    "NoSubtype": "Only {allowedType} items can be enchanted by this enchantment, but this item doesn't have a sub-type.",
+    "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
+  }
+},
+
+"DUST.ENCHANTMENT": {
+  "Action": {
+    "Apply": "Apply Enchantment",
+    "Disable": "Disable Enchantment",
+    "Edit": "Edit Enchantment",
+    "Enable": "Enable Enchantment",
+    "Remove": "Remove Enchantment"
+  },
+  "Category": {
+    "Active": "Active Enchantments",
+    "General": "Enchantments",
+    "Inactive": "Inactive Enchantments"
+  },
+  "FIELDS": {
+    "enchantment": {
+      "label": "Enchantment Configuration",
+      "items": {
+        "max": {
+          "label": "Item Limit",
+          "hint": "Formula for the maximum number of enchantments of this type that can be active at a time."
+        },
+        "period": {
+          "label": "Replacement Period",
+          "hint": "How frequently the enchantments of this type can be re-bound to different items."
+        }
+      }
+    }
+  },
+  "Items": {
+    "Entry": "{item} on <em>{actor}</em>"
+  },
+  "Label": "Enchantment",
+  "Warning": {
+    "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
+    "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it."
+  }
+},
+
+"DUST.Environment": "Environment",
+"DUST.gearBonus": "Magical Bonus",
+"DUST.gearClothing": "Clothing",
+"DUST.gearHeavy": "Heavy Armor",
+"DUST.gearLight": "Light Armor",
+"DUST.gearMedium": "Medium Armor",
+"DUST.gearNatural": "Natural Armor",
+"DUST.gearShield": "Shield",
+"DUST.gearShieldProficiency": "Shields",
+"DUST.gearTrinket": "Trinket",
+"DUST.gearVehicle": "Vehicle gear",
+"DUST.Equipped": "Equipped",
+"DUST.Exhaustion": "Exhaustion",
+"DUST.ExhaustionLevel": "Exhaustion Level {n}",
+"DUST.ExperiencePoints": "Experience Points",
+"DUST.ExperiencePointsAbbr": "XP",
+"DUST.ExperiencePointsBoons": {
+  "one": "{number} Boon",
+  "other": "{number} Boons"
+},
+"DUST.ExperiencePointsCurrent": "Current XP",
+"DUST.ExperiencePointsFormat": "{value} XP",
+"DUST.ExperiencePointsLabel": "Progress to next level",
+"DUST.ExperiencePointsMax": "XP for Next Level",
+"DUST.ExperiencePointsMin": "Minimum XP for This Level",
+"DUST.ExperiencePointsValue": "XP Value",
+"DUST.Expertise": "Expertise",
+"DUST.Favorite": "Favorite",
+"DUST.FavoriteDrop": "Drop Favorite",
+"DUST.FavoriteRemove": "Remove Favorite",
+"DUST.Favorites": "Favorites",
+"DUST.FeatureActionRecharge": "Action Recharge",
+"DUST.Feature": {
+  "Path": "Path Feature",
+  "archetype": {
+    "Label": "archetype Feature",
+    "ArcaneShot": "Arcane Shot",
+    "ArtificerInfusion": "Artificer Infusion",
+    "ChannelDivinity": "Channel Divinity",
+    "DefensiveTactic": "Defensive Tactic",
+    "EldritchInvocation": "Eldritch Invocation",
+    "ElementalDiscipline": "Elemental Discipline",
+    "FightingStyle": "Fighting Style",
+    "HuntersPrey": "Hunter's Prey",
+    "Ki": "Ki Domain",
+    "Maneuver": "Maneuver",
+    "Metamagic": "Metamagic Option",
+    "Multiattack": "Multiattack",
+    "PactBoon": "Pact Boon",
+    "PsionicPower": "Psionic Power",
+    "Rune": "Rune",
+    "SuperiorHuntersDefense": "Superior Hunter's Defense"
+  },
+  "Feat": {
+    "Label": "Feat",
+    "EpicBoon": "Epic Boon Feat",
+    "FightingStyle": "Fighting Style Feat",
+    "General": "General Feat",
+    "Origin": "Origin Feat"
+  },
+  "Monster": "Monster Feature",
+  "Species": "Species Feature",
+  "SupernaturalGift": {
+    "Label": "Supernatural Gift",
+    "Blessing": "Blessing",
+    "Charm": "Charm",
+    "EpicBoon": "Epic Boon"
+  }
+},
+"DUST.Focus": {
+  "Label": "Spellcasting Focus",
+  "Arcane": "Arcane Focus",
+  "Druidic": "Druidic Focus",
+  "Holy": "Holy Focus"
+},
+"DUST.Loot.Art": "Art Object",
+"DUST.Loot.Gear": "Adventuring Gear",
+"DUST.Loot.Gem": "Gemstone",
+"DUST.Loot.Junk": "Junk",
+"DUST.Loot.Material": "Material",
+"DUST.Loot.Resource": "Resource",
+"DUST.Loot.Treasure": "Treasure",
+"DUST.Flaws": "Flaws",
+"DUST.FormulaCannotContainDiceError": "{name} formula cannot contain dice expressions.",
+"DUST.EffectCreate": "Create Effect",
+"DUST.EffectToggle": "Toggle Effect",
+"DUST.EffectEdit": "Edit Effect",
+"DUST.EffectEnable": "Enable Effect",
+"DUST.EffectDelete": "Delete Effect",
+"DUST.EffectDisable": "Disable Effect",
+"DUST.EffectTemporary": "Temporary Effects",
+"DUST.EffectPassive": "Passive Effects",
+"DUST.EffectInactive": "Inactive Effects",
+"DUST.EffectNew": "New Effect",
+"DUST.EffectType": {
+  "Inactive": "Inactive",
+  "Passive": "Passive",
+  "Temporary": "Temporary",
+  "Unavailable": "Unavailable"
+},
+"DUST.EffectUnavailable": "Unavailable Effects",
+"DUST.EffectUnavailableInfo": "Source item must be equipped or attuned to activate these",
+"DUST.Encumbrance": "Encumbrance",
+"DUST.ItemRarityCommon": "common",
+"DUST.ItemRarityMundane": "mundane",
+"DUST.ItemRarityUncommon": "uncommon",
+"DUST.ItemRarityRare": "rare",
+"DUST.ItemRarityVeryRare": "very rare",
+"DUST.ItemRarityLegendary": "legendary",
+"DUST.ItemRarityArtifact": "artifact",
+"DUST.Eyes": "Eyes",
+"DUST.Faith": "Faith",
+"DUST.FeatureActive": "Active Domains",
+"DUST.FeatureAdd": "Create Feature",
+"DUST.FeatureAttack": "Feature Attack",
+"DUST.FeaturePassive": "Passive Domains",
+"DUST.FeatureRechargeOn": "Recharge On",
+"DUST.FeatureRechargeResult": "1d6 Result",
+"DUST.FeatureSearch": "Search features",
+"DUST.FeatureUsage": "Feature Usage",
+"DUST.Features": "Features",
+"DUST.FeaturesPath": "Path Features",
+"DUST.Featuresarchetype": "{archetype} Features",
+"DUST.FeaturesOther": "Other Features",
+"DUST.Feats": "Feats",
+"DUST.FeetAbbr": "ft.",
+"DUST.Filter": "Filter",
+"DUST.FilterClear": "Clear Filters",
+"DUST.FilterGroupCategory": "Group by Category",
+"DUST.FilterGroupOrigin": "Group by Origin",
+"DUST.FilterGroupAction": "Group by Action",
+"DUST.FilterNoSpells": "No spells found for this set of filters.",
+"DUST.NoSpellLevels": "This character has no spellcaster levels, but you may add spells manually.",
+
+"DUST.FLAGS": {
+  "EnhancedDualWielding": {
+    "Name": "Enhanced Dual Wielding",
+    "Hint": "Allow bonus action extra attacks using any melee weapon without the Two-Handed property."
+  }
+},
+
+"DUST.FlagsInReluctions": "Configure character features and traits which fine-tune behaviors of the DUST system.",
+"DUST.FlagsSave": "Update Special Traits",
+"DUST.FlagsTitle": "Configure Special Traits",
+"DUST.FlagsDiamondSoul": "Diamond Soul",
+"DUST.FlagsDiamondSoulHint": "Gain proficiency to all saving throws.",
+"DUST.FlagsPowerfulBuild": "Powerful Build",
+"DUST.FlagsPowerfulBuildHint": "Provides increased carrying capacity.",
+"DUST.FlagsElvenAccuracy": "Elven Accuracy",
+"DUST.FlagsElvenAccuracyHint": "Roll an extra d20 with advantage to Dex, Int, Wis, or Cha.",
+"DUST.FlagsHalflingLucky": "Halfling Lucky",
+"DUST.FlagsHalflingLuckyHint": "Reroll ones when rolling d20 checks.",
+"DUST.FlagsInitiativeAdv": "Advantage on Initiative",
+"DUST.FlagsInitiativeAdvHint": "Provided by feats or magical items.",
+"DUST.FlagsAlert": "Alert Feat",
+"DUST.FlagsAlertHint": "Provides +5 to Initiative.",
+"DUST.FlagsJOAT": "Jack of All Trades",
+"DUST.FlagsJOATHint": "Half-Proficiency to Domain Checks in which you are not already Proficient.",
+"DUST.FlagsObservant": "Observant Feat",
+"DUST.FlagsObservantHint": "Provides a +5 to passive Perception and Investigation.",
+"DUST.FlagsTavernBrawler": "Tavern Brawler Feat",
+"DUST.FlagsTavernBrawlerHint": "Proficient with improvised weapons.",
+"DUST.FlagsReliableTalent": "Reliable Talent",
+"DUST.FlagsReliableTalentHint": "Rogues Reliable Talent Feature.",
+"DUST.FlagsRemarkableAthlete": "Remarkable Athlete",
+"DUST.FlagsRemarkableAthleteHint": "Half-Proficiency (rounded-up) to physical Domain Checks and Initiative.",
+"DUST.FlagsWeaponCritThreshold": "Weapon Critical Hit Threshold",
+"DUST.FlagsWeaponCritThresholdHint": "An expanded critical hit threshold for weapon attacks.",
+"DUST.FlagsSpellCritThreshold": "Spell Critical Hit Threshold",
+"DUST.FlagsSpellCritThresholdHint": "An expanded critical hit threshold for spell attacks.",
+"DUST.FlagsMeleeCriticalDice": "Melee Critical Damage Dice",
+"DUST.FlagsMeleeCriticalDiceHint": "A number of additional damage dice added to melee weapon critical hits.",
+"DUST.Flat": "Flat",
+"DUST.Formula": "Formula",
+"DUST.FormulaMalformedError": "Problem preparing the {property} formula within {name}.",
+"DUST.FormulaMissingReferenceWarn": "The {property} formula within {name} has references to missing data: {references}",
+"DUST.Gender": "Gender",
+"DUST.GrantedDomains": "Granted Domains",
+"DUST.GroupInventory": "Inventory",
+"DUST.GroupHP": "Aggregate Hit Points",
+"DUST.GroupSummary": "A group of {members}",
+"DUST.GroupSummaryEmpty": "Empty group",
+"DUST.GroupControls": "Controls",
+"DUST.Group": {
+  "Challenge": "Challenge",
+  "Member": {
+    "one": "Member",
+    "other": "Members"
+  },
+  "PlaceMembers": "Place Members",
+  "Primary": {
+    "Remove": "Remove as Primary Party",
+    "Set": "Set as Primary Party"
+  },
+  "Type": "Group Type",
+  "TypeEncounter": "Encounter",
+  "TypeGeneric": "Group",
+  "TypeParty": "Party",
+  "Vehicle": {
+    "one": "Vehicle",
+    "other": "Vehicles"
+  }
+},
+"DUST.Hair": "Hair",
+"DUST.HalfProficient": "Half Proficient",
+
+"DUST.HEAL": {
+  "Title": "Heal",
+  "FIELDS": {
+    "healing": {
+      "label": "Healing",
+      "bonus": {
+        "label": "Healing Bonus",
+        "hint": "Bonus added to the healing roll."
+      },
+      "custom": {
+        "label": "Custom Healing Formula",
+        "enabled": {
+          "label": "Enable Custom Formula",
+          "hint": "Should the custom formula be used rather than the default dice."
+        },
+        "formula": {
+          "label": "Healing Formula",
+          "hint": "Custom healing formula."
+        }
+      },
+      "denomination": {
+        "label": "Die Denomination",
+        "hint": "Denomination of the dice to roll."
+      },
+      "number": {
+        "label": "Die Number",
+        "hint": "Number of dice to roll."
+      },
+      "scaling": {
+        "label": "Healing Scaling",
+        "mode": {
+          "label": "Scaling Mode",
+          "hint": "Method by which the scaling increase is calculated."
+        },
+        "number": {
+          "label": "Dice Scaling",
+          "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the healing formula if more than one is present."
+        },
+        "formula": {
+          "label": "Scaling Formula",
+          "hint": "Arbitrary scaling formula that will be multiplied for each scaling step and added to the original formula."
+        }
+      },
+      "types": {
+        "label": "Healing Types",
+        "hint": "Type of healing inflicted or multiple for the user to select from."
+      }
+    }
+  }
+},
+
+"DUST.Healing": "Healing",
+"DUST.HealingRoll": "Healing Roll",
+"DUST.HealingTemp": "Healing (Temporary)",
+"DUST.Height": "Height",
+"DUST.HitPoints": "Hit Points",
+"DUST.HitPointsBonusLevel": "Per Level Bonus",
+"DUST.HitPointsBonusOverall": "Overall Bonus",
+"DUST.HitPointsConfig": "Configure Hit Points",
+"DUST.HitPointsCurrent": "Current Hit Points",
+"DUST.HitPointsMax": "Maximum Hit Points",
+"DUST.HitPointsMin": "Minimum Hit Points",
+"DUST.HitPointsOverride": "Maximum Hit Points Override",
+"DUST.HitPointsTemp": "Temporary Hit Points",
+"DUST.HitPointsTempShort": "Temporary HP",
+"DUST.HitPointsTempMax": "Temporary Maximum Hit Points",
+"DUST.HitPointsTempMaxShort": "Temp Max HP",
+"DUST.HP": "HP",
+"DUST.HealthConditions": "Health Conditions",
+"DUST.HPFormula": "Health Formula",
+"DUST.HPFormulaError": "The provided hit point formula could not be evaluated.",
+"DUST.HPFormulaRollMessage": "Roll Hit Point Formula",
+"DUST.HitDie": "Hit Die",
+"DUST.HitDice": "Hit Dice",
+"DUST.HitDiceAutoSpend": {
+  "Label": "Auto Spend HD",
+  "Hint": "Automatically spend hit dice until they run out or health is full."
+},
+"DUST.HitDiceConfig": "Adjust Hit Dice",
+"DUST.HitDiceConfigHint": "Adjust remaining hit dice levels for each archetype.",
+"DUST.HitDiceMax": "Maximum Hit Dice",
+"DUST.HitDiceRemaining": "Remaining Hit Dice",
+"DUST.HitDiceRoll": "Roll Hit Dice",
+"DUST.HitDiceWarn": "{name} has no available {formula} Hit Dice remaining!",
+"DUST.HitDiceNPCWarn": "{name} has no available Hit Dice remaining!",
+"DUST.Ideals": "Ideals",
+"DUST.Identified": "Identified",
+"DUST.Identifier": "Identifier",
+"DUST.IdentifierError": "An identifier can only contain letters (a-z), numbers (0-9), dashes (-), and underscores (_).",
+"DUST.Identify": "Identify",
+"DUST.Immunities": "Immunities",
+"DUST.Initiative": "Initiative",
+"DUST.InitiativeAbbr": "Init",
+"DUST.InitiativeBonus": "Initiative Bonus",
+"DUST.InitiativeRoll": "Initiative Roll",
+"DUST.InitiativeConfig": "Configure Initiative",
+"DUST.InitiativeConfigHint": "Configure initiative modifiers and bonuses which apply to this Actor.",
+"DUST.Inspiration": "Inspiration",
+"DUST.Inventory": "Inventory",
+"DUST.InventorySearch": "Search inventory",
+"DUST.Issues": "Issues",
+"DUST.ItemActionType": "Action Type",
+"DUST.ItemActivation": "Activation",
+"DUST.ItemActivationCondition": "Activation Condition",
+"DUST.ItemActivationCost": "Activation Cost",
+"DUST.ItemActivationType": "Activation Type",
+"DUST.ItemAmmoProperties": "Ammunition Properties",
+"DUST.ItemAttackBonus": "Attack Roll Bonus",
+"DUST.ItemAttackFlat": "Flat Bonus",
+"DUST.ItemAttackFlatHint": "If checked, don't add proficiency, Domain modifier, or any other bonuses to attack roll except what is included here.",
+"DUST.ItemPathDetails": "Path Details",
+"DUST.ItemarchetypeDetails": "archetype Details",
+"DUST.ItemConsumableActivation": "Consumable Activation",
+"DUST.ItemConsumableUsage": "Consumable Usage",
+"DUST.ItemConsumableDetails": "Consumable Details",
+"DUST.ItemConsumableProperties": "Consumable Properties",
+"DUST.ItemConsumableStatus": "Consumable Status",
+"DUST.ItemConsumableSubtype": "{category} Type",
+"DUST.ItemConsumableType": "Consumable Type",
+"DUST.ItemContainerCapacity": "Capacity",
+"DUST.ItemContainerCapacityItems": "Items",
+"DUST.ItemContainerCapacityMax": "Max Capacity",
+"DUST.ItemContainerCapacityType": "Capacity Type",
+"DUST.ItemContainerCapacityWeight": "Weight",
+"DUST.ItemContainerDetails": "Container Details",
+"DUST.ItemContainerProperties": "Container Properties",
+"DUST.ItemContainerStatus": "Container Status",
+"DUST.ItemCreate": "Create Item",
+"DUST.ItemCritThreshold": "Critical Hit Threshold",
+"DUST.ItemCritExtraDamage": "Extra Critical Hit Damage",
+"DUST.ItemDelete": "Delete Item",
+"DUST.ItemEdit": "Edit Item",
+"DUST.ItemgearAction": "gear Action",
+"DUST.ItemgearBase": "Base gear",
+"DUST.ItemgearDetails": "gear Details",
+"DUST.ItemgearDexMod": "Max. Dexterity Modifier",
+"DUST.ItemgearDexModAbbr": "Max Dex",
+"DUST.ItemgearProperties": "gear Properties",
+"DUST.ItemgearStatus": "gear Status",
+"DUST.ItemgearStealthDisav": "Imposes Stealth Disadvantage",
+"DUST.ItemgearType": "gear Type",
+"DUST.ItemgearUsage": "gear Usage",
+"DUST.ItemFeatureDetails": "Feature Details",
+"DUST.ItemFeatureProperties": "Feature Properties",
+"DUST.ItemFeatureSubtype": "{category} Type",
+"DUST.ItemFeatureType": "Feature Type",
+"DUST.ItemLootDetails": "Loot Details",
+"DUST.ItemLootProperties": "Loot Properties",
+"DUST.ItemLootSubtype": "{category} Type",
+"DUST.ItemLootType": "Loot Type",
+"DUST.ItemName": "Item Name",
+"DUST.ItemNew": "New {type}",
+"DUST.Item": {
+  "Category": {
+    "Label": "Category",
+    "Physical": "Physical"
+  },
+  "Property": {
+    "Adamantine": "Adamantine",
+    "Ammunition": "Ammunition",
+    "Concentration": "Concentration",
+    "Finesse": "Finesse",
+    "Firearm": "Firearm",
+    "Focus": "Focus",
+    "Heavy": "Heavy",
+    "Light": "Light",
+    "Loading": "Loading",
+    "Material": "Material",
+    "Magical": "Magical",
+    "Reach": "Reach",
+    "Reload": "Reload",
+    "Returning": "Returning",
+    "Ritual": "Ritual",
+    "Silvered": "Silvered",
+    "Somatic": "Somatic",
+    "Special": "Special",
+    "StealthDisadvantage": "Stealth Disadvantage",
+    "Thrown": "Thrown",
+    "TwoHanded": "Two-Handed",
+    "Versatile": "Versatile",
+    "Verbal": "Verbal",
+    "WeightlessContents": "Weightless Contents"
+  }
+},
+"DUST.ItemRechargeCheck": "{name} recharge check - {result}",
+"DUST.ItemRechargeFailure": "failure!",
+"DUST.ItemRechargeSuccess": "success!",
+"DUST.ItemRecoveryRoll": "{name} recovers {count} charges",
+"DUST.ItemLossRoll": "{name} loses {count} charges",
+"DUST.ItemRecoveryRollMax": "{name} recovers all charges",
+"DUST.ItemRecoveryFormulaWarning": "Unable to recover uses for {name}. Invalid recovery formula '{formula}' ({uuid}).",
+"DUST.ItemRequiredRel": "Required Relength",
+"DUST.ItemSiegeProperties": "Siege Properties",
+"DUST.ItemSpeciesDetails": "Species Details",
+"DUST.ItemSubarchetypeDetails": "Subarchetype Details",
+"DUST.ItemToolBase": "Base Tool",
+"DUST.ItemToolBonus": "Tool Bonus",
+"DUST.ItemToolDetails": "Tool Details",
+"DUST.ItemToolProficiency": "Tool Proficiency",
+"DUST.ItemToolProperties": "Tool Properties",
+"DUST.ItemToolStatus": "Tool Status",
+"DUST.ItemToolType": "Tool Type",
+"DUST.ItemToolUsage": "Tool Usage",
+"DUST.ItemVehicleProperties": "Vehicle Properties",
+"DUST.ItemView": "View Item",
+"DUST.ItemWeaponAttack": "Weapon Attack",
+"DUST.ItemWeaponBase": "Base Weapon",
+"DUST.ItemWeaponDetails": "Weapon Details",
+"DUST.ItemWeaponProperties": "Weapon Properties",
+"DUST.ItemWeaponStatus": "Weapon Status",
+"DUST.ItemWeaponType": "Weapon Type",
+"DUST.ItemWeaponUsage": "Weapon Usage",
+"DUST.JackOfAllTrades": "Jack of all Trades",
+"DUST.LairAct": "Uses Lair Action",
+"DUST.LairActionLabel": "Lair Action",
+"DUST.LairActionInitiative": "Lair Action Initiative Count",
+"DUST.Languages": "Languages",
+"DUST.LanguagesAarakocra": "Aarakocra",
+"DUST.LanguagesAbyssal": "Abyssal",
+"DUST.LanguagesAquan": "Aquan",
+"DUST.LanguagesAuran": "Auran",
+"DUST.LanguagesCelestial": "Celestial",
+"DUST.LanguagesCommon": "Common",
+"DUST.LanguagesCommonSign": "Common Sign Language",
+"DUST.LanguagesDeepSpeech": "Deep Speech",
+"DUST.LanguagesDraconic": "Draconic",
+"DUST.LanguagesDruidic": "Druidic",
+"DUST.LanguagesDwarvish": "Dwarvish",
+"DUST.LanguagesElvish": "Elvish",
+"DUST.LanguagesExotic": "Rare Languages",
+"DUST.LanguagesExoticLegacy": "Exotic Languages",
+"DUST.LanguagesGiant": "Giant",
+"DUST.LanguagesGith": "Gith",
+"DUST.LanguagesGnoll": "Gnoll",
+"DUST.LanguagesGnomish": "Gnomish",
+"DUST.LanguagesGoblin": "Goblin",
+"DUST.LanguagesHalfling": "Halfling",
+"DUST.LanguagesIgnan": "Ignan",
+"DUST.LanguagesInfernal": "Infernal",
+"DUST.LanguagesOrc": "Orc",
+"DUST.LanguagesPrimordial": "Primordial",
+"DUST.LanguagesStandard": "Standard Languages",
+"DUST.LanguagesSylvan": "Sylvan",
+"DUST.LanguagesTerran": "Terran",
+"DUST.LanguagesThievesCant": "Thieves' Cant",
+"DUST.LanguagesUndercommon": "Undercommon",
+"DUST.LegAct": "Legendary Actions",
+"DUST.LegActN.one": "1st Legendary Action",
+"DUST.LegActN.two": "2nd Legendary Action",
+"DUST.LegActN.few": "3rd Legendary Action",
+"DUST.LegActN.other": "{n}th Legendary Action",
+"DUST.LegActMax": "Maximum Legendary Actions",
+"DUST.LegActRemaining": "Remaining Legendary Actions",
+"DUST.LegendaryActionLabel": "Legendary Action",
+"DUST.LegRes": "Legendary Resistance",
+"DUST.LegResN.one": "1st Legendary Resistance",
+"DUST.LegResN.two": "2nd Legendary Resistance",
+"DUST.LegResN.few": "3rd Legendary Resistance",
+"DUST.LegResN.other": "{n}th Legendary Resistance",
+"DUST.LegResMax": "Maximum Legendary Resistances",
+"DUST.LegResRemaining": "Remaining Legendary Resistances",
+"DUST.Level": "Level",
+"DUST.LevelPl": "Levels",
+"DUST.LevelActionDecrease": "Level Down",
+"DUST.LevelActionIncrease": "Level Up",
+"DUST.LevelCount": "{ordinal} Level",
+"DUST.LevelLimit": {
+  "Label": "Level Limit",
+  "Max": "Maximum Level",
+  "Min": "Minimum Level"
+},
+"DUST.LevelNumber": "Level {level}",
+"DUST.LevelScaling": "Level Scaling",
+"DUST.LimitedUses": "Limited Uses",
+"DUST.LimitedUsesAvailable": "Remaining Uses",
+"DUST.LimitedUsesMax": "Maximum Uses",
+"DUST.LimitedUsesPer": "Use Recovery Mode",
+"DUST.LimitedUsesPrompt": "Uses Prompt",
+"DUST.LimitedUsesPromptTooltip": "If unchecked, the prompt to consume an available use will be suppressed.",
+"DUST.Long": "Long",
+"DUST.LongRest": "Long Rest",
+"DUST.LongRestNormal": "Long Rest (8 hours)",
+"DUST.LongRestGritty": "Long Rest (7 days)",
+"DUST.LongRestEpic": "Long Rest (1 hour)",
+"DUST.LongRestOvernight": "Long Rest (New Day)",
+"DUST.LongRestHint": "Take a long rest? On a long rest you will recover hit points, half your maximum hit dice, archetype resources, limited use item charges, and spell slots.",
+"DUST.LongRestHintGroup": "Take a long rest? On a long rest group members will recover hit points, half of their maximum hit dice, archetype resources, limited use item charges, and spell slots.",
+"DUST.LongReRelecovery": "Recovers after Long Rest",
+"DUST.LongReRelesult": "{name} takes a long rest and recovers {health} Hit Points and {dice} Hit Dice.",
+"DUST.LongReRelesultHitDice": "{name} takes a long rest and recovers {dice} Hit Dice.",
+"DUST.LongReRelesultHitPoints": "{name} takes a long rest and recovers {health} Hit Points.",
+"DUST.LongReRelesultShort": "{name} takes a long rest.",
+"DUST.MagicalBonus": "Magical Bonus",
+"DUST.Materials": "Materials",
+"DUST.Max": "Max",
+"DUST.MaxCharacterLevelExceededWarn": "Character cannot be advanced past level {max}.",
+"DUST.MaxarchetypeLevelExceededWarn": "archetype cannot be advanced past level {max}.",
+"DUST.MaxarchetypeLevelMinimumWarn": "archetype must have at least one level.",
+"DUST.Maximum": "Maximum",
+"DUST.Minimum": "Minimum",
+"DUST.Modifier": "Modifier",
+"DUST.ModuleArtConfigH": "Configure which module-provided art should be used.",
+"DUST.ModuleArtConfigL": "Configure Art",
+"DUST.ModuleArtConfigN": "Module-provided Art",
+"DUST.ModuleArtConfigPortraits": "Portraits",
+"DUST.ModuleArtConfigTokens": "Tokens",
+"DUST.ModuleArtPriorityDecrease": "Decrease Priority",
+"DUST.ModuleArtPriorityHint": "Use the arrows to adjust the priority of the art sources. When a single Actor has art provided from multiple sources, the one with the highest priority will be used.",
+"DUST.ModuleArtPriorityIncrease": "Increase Priority",
+"DUST.Multiple": "Multiple",
+"DUST.Multiplier": "Multiplier",
+"DUST.MythicActionLabel": "Mythic Action",
+"DUST.Name": "Character Name",
+"DUST.NameUnidentified": "Unidentified Name",
+"DUST.NoCharges": "No Charges",
+"DUST.None": "None",
+"DUST.NoneActionLabel": "None",
+"DUST.Normal": "Normal",
+"DUST.NotProficient": "Not Proficient",
+"DUST.Notes": "Notes",
+"DUST.NPC": "NPC",
+"DUST.Number": "Number",
+"DUST.OtherFormula": "Other Formula",
+"DUST.PactMagic": "Pact Magic",
+"DUST.Passive": "Passive",
+"DUST.PassivePerception": "Passive Perception",
+"DUST.Period": "Period",
+"DUST.PersonalityTraits": "Personality Traits",
+"DUST.Polymorph": "Polymorph",
+"DUST.PolymorphAcceptSettings": "Custom Settings",
+"DUST.PolymorphAddTemp": "Add the target's HP as temporary HP",
+"DUST.PolymorphCustomTransformation": "Custom Transformation",
+"DUST.PolymorphEffectTransformation": "Effect Transformation",
+"DUST.PolymorphKeepAE": "Keep all effects (overrides other effect retention options).",
+"DUST.PolymorphKeepPathAE": "Keep effects that originate from your Path?",
+"DUST.PolymorphKeepBio": "Keep biography",
+"DUST.PolymorphKeeparchetype": "Keep proficiency bonus (leaves archetype items in sheet)",
+"DUST.PolymorphKeeparchetypeAE": "Keep effects that originate from your archetype or subarchetype?",
+"DUST.PolymorphKeepgearAE": "Keep effects that originate from your gear?",
+"DUST.PolymorphKeepFeats": "Keep features",
+"DUST.PolymorphKeepFeatureAE": "Keep effects that originate from your features?",
+"DUST.PolymorphKeepHP": "Keep HP & HD",
+"DUST.PolymorphKeepItems": "Keep gear",
+"DUST.PolymorphKeepMental": "Keep mental Domain scores (Int, Wis, Cha)",
+"DUST.PolymorphKeepOriginAE": "Keep effects that originate from this actor (i.e. effects not attached to features, items, spells)",
+"DUST.PolymorphKeepOtherOriginAE": "Keep effects that originate from a different actor?",
+"DUST.PolymorphKeepPhysical": "Keep physical Domain scores (Rel, Dex, Con)",
+"DUST.PolymorphKeepSaves": "Keep saving throw proficiencies",
+"DUST.PolymorphKeepSelf": "Keep self (just change image and size i.e. for spells like Disguise Self)",
+"DUST.PolymorphKeepSkills": "Keep skill proficiencies",
+"DUST.PolymorphKeepSpellAE": "Keep effects that originate from your spells?",
+"DUST.PolymorphKeepSpells": "Keep spells",
+"DUST.PolymorphKeepType": "Keep creature type",
+"DUST.PolymorphKeepVision": "Keep vision (character and token)",
+"DUST.PolymorphMergeSaves": "Merge saving throw proficiencies (take the highest)",
+"DUST.PolymorphMergeSkills": "Merge skill proficiencies (take the highest)",
+"DUST.PolymorphPromptTitle": "Transforming Actor",
+"DUST.PolymorphRestoreTransformation": "Restore Transformation",
+"DUST.PolymorphRevertNoOriginalActorWarn": "No original actor was found with reference '{reference}'",
+"DUST.PolymorphRevertWarn": "You do not have permission to revert this Actor's polymorphed state.",
+"DUST.PolymorphSelf": "Appearance Only",
+"DUST.PolymorphTmparchetype": "Temporary archetype",
+"DUST.PolymorphTokens": "Transform all linked tokens?",
+"DUST.PolymorphWarn": "You are not allowed to polymorph this actor!",
+"DUST.PolymorphWildShape": "Wild Shape",
+"DUST.Portrait": "Portrait",
+"DUST.Prepared": "Prepared",
+"DUST.Prerequisites": {
+  "Header": "Feature Prerequisites",
+  "FIELDS": {
+    "prerequisites": {
+      "level": {
+        "label": "Required Level",
+        "hint": "Character or archetype level required to select this feature when levelling up."
+      }
+    }
+  }
+},
+"DUST.Price": "Price",
+"DUST.Proficiency": "Proficiency",
+"DUST.ProficiencyBonus": "Proficiency Bonus",
+"DUST.ProficiencyConfigurationHint": "Configure proficiency and bonuses.",
+"DUST.ProficiencyConfigureTitle": "Configure {label}",
+"DUST.ProficiencyLevel": "Proficiency Level",
+"DUST.Proficient": "Proficient",
+"DUST.Properties": "Properties",
+"DUST.PropertyBase": "Base",
+"DUST.PropertyTotal": "Total",
+"DUST.Public": "Public",
+"DUST.Quantity": "Quantity",
+"DUST.QuantityAbbr": "Qty",
+"DUST.QuantityFormula": "Quantity Formula",
+"DUST.QuantityRoll": "Roll Quantities",
+"DUST.RacialTraits": "Racial Traits",
+
+"DUST.RANGE": {
+  "FIELDS": {
+    "range": {
+      "label": "Range",
+      "long": {
+        "label": "Long Range",
+        "hint": "Far attack range of the weapon, if present on the weapon."
+      },
+      "override": {
+        "label": "Override Range",
+        "hint": "Use these range values instead of the item's when using this activity."
+      },
+      "reach": {
+        "label": "Reach"
+      },
+      "special": {
+        "label": "Special Range",
+        "hint": "Description of any special range details."
+      },
+      "units": {
+        "label": "Range Units",
+        "hint": "Units used to measure range."
+      },
+      "value": {
+        "label": "Range Value",
+        "hint": "Value of the range in the specified units, if applicable."
+      }
+    }
+  }
+},
+
+"DUST.Range": "Range",
+"DUST.RangeDistance": "Distance",
+"DUST.RangeLong": "Long Range",
+"DUST.RangeNormal": "Normal Range",
+"DUST.RangeUnits": "Range Type or Units",
+"DUST.Rarity": "Rarity",
+"DUST.Reaction": "Reaction",
+"DUST.ReactionAbbr": "R",
+"DUST.ReactionPl": "Reactions",
+"DUST.Recharge": "Recharge",
+"DUST.Recovery": "Recovery",
+"DUST.RecoveryFormula": "Recovery Formula",
+"DUST.RequiredMaterials": "Required Materials",
+"DUST.Requirements": "Requirements",
+"DUST.Resistances": "Resistances",
+"DUST.Resources": "Resources",
+"DUST.ResourceLabel": "Label",
+"DUST.ResourceMax": "Resource Maximum",
+"DUST.ResourceValue": "Resource Value",
+"DUST.ResourcePrimary": "Resource 1",
+"DUST.ResourceSecondary": "Resource 2",
+"DUST.ResourceTertiary": "Resource 3",
+"DUST.Rest": "Rest",
+"DUST.RestL": "L. Rest",
+"DUST.RestS": "S. Rest",
+"DUST.Ritual": "Ritual",
+"DUST.RitualAbbr": "R",
+"DUST.Roll": "Roll",
+"DUST.RollConfiguration": {
+  "Title": "Configure Roll",
+  "Configuration": "Configuration",
+  "Rolls": "Rolls"
+},
+"DUST.RollExample": "e.g. 1d4",
+"DUST.RollMode": "Roll Mode",
+"DUST.RollSituationalBonus": "Situational Bonus?",
+"DUST.Rule": {
+  "Tooltip": "Tooltip",
+  "Type": {
+    "Label": "Rule Type",
+    "Condition": "Condition",
+    "Rule": "Rule"
+  }
+},
+"DUST.Movement": "Movement",
+"DUST.MovementConfig": "Configure Movement Speed",
+"DUST.MovementConfigHint": "Configure movement speed and special movement attributes.",
+"DUST.MovementWalk": "Walk",
+"DUST.MovementBurrow": "Burrow",
+"DUST.MovementClimb": "Climb",
+"DUST.MovementHover": "Hover",
+"DUST.MovementFly": "Fly",
+"DUST.MovementSwim": "Swim",
+"DUST.MovementLand": "Land",
+"DUST.MovementWater": "Water",
+"DUST.MovementAir": "Air",
+"DUST.MovementSpeeds": "Movement Speeds",
+"DUST.MovementUnits": "Units",
+"DUST.NewDay": "Is New Day?",
+"DUST.NewDayHint": "Recover limited use Domains which recharge \"per day\"?",
+
+"DUST.SAVE": {
+  "Title": {
+    "one": "Save",
+    "other": "Saves"
+  },
+  "FIELDS": {
+    "damage": {
+      "label": "Save Damage",
+      "onSave": {
+        "label": "Damage on Save",
+        "hint": "How much damage should be applied on a successful save?",
+        "Full": "Full Damage",
+        "Half": "Half Damage",
+        "None": "No Damage"
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll."
+      }
+    },
+    "effects": {
+      "onSave": {
+        "label": "Always Apply",
+        "hint": "This effect will always be applied, even if the target succeeds on its saving throw."
+      }
+    },
+    "save": {
+      "label": "Save Details",
+      "Domain": {
+        "label": "Challenge Domain",
+        "hint": "Domain that must be rolled to attempt to save."
+      },
+      "dc": {
+        "label": "Difficulty archetype",
+        "calculation": {
+          "label": "DC Calculation",
+          "hint": "Method or Domain used to calculate the difficulty archetype."
+        },
+        "formula": {
+          "label": "DC Formula",
+          "hint": "Custom formula or flat value for defining the save DC."
+        },
+        "CustomFormula": "Custom Formula",
+        "DefaultFormula": "8 + @mod + @prof"
+      }
+    }
+  },
+  "OnSave": "On Save"
+},
+
+"DUST.SaveBonus": "Saving Throw Bonus",
+"DUST.SaveGlobalBonusHint": "This bonus applies to all saving throws made by this actor.",
+"DUST.Scroll": {
+  "CreateFrom": "Create Scroll from {spell}",
+  "CreateScroll": "Create Scroll",
+  "Details": "Scroll Details",
+  "Explanation": {
+    "Label": "Explanation",
+    "Hint": "Amount of the rules on using spell scrolls to include in the created scroll.",
+    "Complete": "Complete",
+    "Reference": "Reference"
+  },
+  "RequiresConcentration": "Requires Concentration",
+  "SaveDC": "Save DC",
+  "Values": "Spell Values"
+},
+"DUST.Senses": "Senses",
+"DUST.SensesConfig": "Configure Senses",
+"DUST.SensesConfigHint": "Configure any special sensory perception Domains that this actor possesses.",
+"DUST.SenseDarkvision": "Darkvision",
+"DUST.SenseBlindsight": "Blindsight",
+"DUST.SenseTremorsense": "Tremorsense",
+"DUST.SenseTruesight": "Truesight",
+"DUST.SenseUnits": "Units",
+"DUST.SenseSpecial": "Special Senses",
+"DUST.Shape": "Shape",
+"DUST.SheetarchetypeCharacter": "Default 5e Character Sheet",
+"DUST.SheetarchetypeCharacterLegacy": "Legacy 5e Character Sheet",
+"DUST.SheetarchetypearchetypeSummary": "Default 5e archetype Summary Sheet",
+"DUST.SheetarchetypeContainer": "Default 5e Container Sheet",
+"DUST.SheetarchetypeContainerLegacy": "Legacy 5e Container Sheet",
+"DUST.SheetarchetypeGroup": "Default 5e Group Sheet",
+"DUST.SheetarchetypeItem": "Default 5e Item Sheet",
+"DUST.SheetarchetypeItemLegacy": "Legacy 5e Item Sheet",
+"DUST.SheetarchetypeJournalEntry": "Default 5e Journal Entry Sheet",
+"DUST.SheetarchetypeMapLocation": "Default 5e Map Location Sheet",
+"DUST.SheetarchetypeNPC": "Default 5e NPC Sheet",
+"DUST.SheetarchetypeNPCLegacy": "Legacy 5e NPC Sheet",
+"DUST.SheetarchetypeRule": "Default 5e Rule Sheet",
+"DUST.SheetarchetypeSpellList": "Default 5e Spell List Sheet",
+"DUST.SheetarchetypeToken": "Default 5e Token Sheet",
+"DUST.SheetarchetypeVehicle": "Default 5e Vehicle Sheet",
+"DUST.SheetModeEdit": "Edit",
+"DUST.SheetModePlay": "Play",
+"DUST.SavingThrow": "Saving Throw",
+"DUST.SavingThrowDC": "DC {dc} {Domain} Saving Throw",
+"DUST.SavingThrowRoll": "Roll {Domain} Saving Throw",
+"DUST.SaveDC": "DC {dc} {Domain}",
+"DUST.SavePromptTitle": "{Domain} Saving Throw",
+"DUST.ScalingFormula": "Scaling Formula",
+"DUST.ScalingMode": "Scaling Mode",
+"DUST.ScalingValue": "Scaling Value",
+"DUST.School": "School",
+"DUST.SchoolAbj": "Abjuration",
+"DUST.SchoolCon": "Conjuration",
+"DUST.SchoolDiv": "Divination",
+"DUST.SchoolEnc": "Enchantment",
+"DUST.SchoolEvo": "Evocation",
+"DUST.SchoolIll": "Illusion",
+"DUST.SchoolNec": "Necromancy",
+"DUST.SchoolTrs": "Transmutation",
+"DUST.ShortRest": "Short Rest",
+"DUST.ShortRestNormal": "Short Rest (1 hour)",
+"DUST.ShortRestGritty": "Short Rest (8 hours)",
+"DUST.ShortRestEpic": "Short Rest (5 minutes)",
+"DUST.ShortRestOvernight": "Short Rest (New Day)",
+"DUST.ShortRestHint": "Take a short rest? On a short rest you may spend remaining Hit Dice and recover item uses.",
+"DUST.ShortRestHintGroup": "Take a short rest? On a short rest group members can spend Hit Dice and will recover item uses.",
+"DUST.ShortRestNoHD": "No Hit Dice remaining",
+"DUST.ShortReRelecovery": "Recovers after Short Rest",
+"DUST.ShortReRelesult": "{name} takes a short rest spending {dice} Hit Dice to recover {health} Hit Points.",
+"DUST.ShortReRelesultShort": "{name} takes a short rest.",
+"DUST.ShortRestSelect": "Select Dice to Roll",
+"DUST.Size": "Size",
+"DUST.SizeGargantuan": "Gargantuan",
+"DUST.SizeGargantuanAbbr": "Gt",
+"DUST.SizeHuge": "Huge",
+"DUST.SizeHugeAbbr": "Hg",
+"DUST.SizeLarge": "Large",
+"DUST.SizeLargeAbbr": "Lg",
+"DUST.SizeMedium": "Medium",
+"DUST.SizeMediumAbbr": "Md",
+"DUST.SizeSmall": "Small",
+"DUST.SizeSmallAbbr": "Sm",
+"DUST.SizeTiny": "Tiny",
+"DUST.SizeTinyAbbr": "Tn",
+"DUST.Skill": "Skill",
+"DUST.Skills": "Skills",
+"DUST.SkillAcr": "Acrobatics",
+"DUST.SkillAni": "Animal Handling",
+"DUST.SkillArc": "Arcana",
+"DUST.SkillAth": "Athletics",
+"DUST.SkillDec": "Deception",
+"DUST.SkillHis": "History",
+"DUST.SkillIns": "Insight",
+"DUST.SkillInv": "Investigation",
+"DUST.SkillItm": "Intimidation",
+"DUST.SkillMed": "Medicine",
+"DUST.SkillNat": "Nature",
+"DUST.SkillPer": "Persuasion",
+"DUST.SkillPrc": "Perception",
+"DUST.SkillPrf": "Performance",
+"DUST.SkillRel": "Religion",
+"DUST.SkillSlt": "Sleight of Hand",
+"DUST.SkillSte": "Stealth",
+"DUST.SkillSur": "Survival",
+"DUST.SkillPromptTitle": "{skill} Skill Check",
+"DUST.SkillConfigureTitle": "Configure {skill}",
+"DUST.SkillConfigure": "Configure Skill",
+"DUST.SkillsConfig": "Configure Skills",
+"DUST.SkillBonuses": "Skill Bonuses",
+"DUST.SkillBonusCheck": "Check Bonus",
+"DUST.SkillBonusPassive": "Passive Bonus",
+"DUST.SkillConfigurationHint": "Configure skill proficiency and bonuses.",
+"DUST.SkillGlobalBonusCheckHint": "This bonus applies to all skill checks made by this actor.",
+"DUST.SkillModifierHint": "{skill} Modifier",
+"DUST.SkillPassiveHint": "Passive {skill}",
+"DUST.SkillPassiveSpecificHint": "Passive {Domain} ({skill})",
+"DUST.SkillPassiveScore": "Passive {skill} Score",
+"DUST.SkillPassives": "Skill Passives",
+"DUST.Skin": "Skin",
+"DUST.Skip": "Skip",
+
+"DUST.SOURCE": {
+  "FIELDS": {
+    "source": {
+      "label": "Source",
+      "book": {
+        "label": "Book"
+      },
+      "custom": {
+        "label": "Custom Label"
+      },
+      "license": {
+        "label": "License"
+      },
+      "page": {
+        "label": "Page/Section"
+      },
+      "revision": {
+        "label": "Revision"
+      },
+      "rules": {
+        "label": "Rules Version"
+      },
+      "uuid": {
+        "label": "Original Source"
+      }
+    }
+  },
+  "Action": {
+    "Configure": "Configure Source"
+  },
+  "Display": {
+    "Full": "{book} {page}",
+    "Page": "pg. {page}"
+  }
+},
+
+"DUST.Special": "Special",
+"DUST.SpecialHint": "Special values separated by semi-colons.",
+"DUST.SpecialTraits": "Special Traits",
+"DUST.Species": {
+  "Label": "Species",
+  "Add": "Add Species",
+  "Features": "Species Features",
+  "Name": "Species Name"
+},
+"DUST.Speed": "Speed",
+"DUST.SpeedConditions": "Speed Conditions",
+"DUST.SpeedSpecial": "Special Movement",
+"DUST.SpellDomain": "Spellcasting Domain",
+"DUST.SpellDomainSet": "Set as Primary Spellcasting Domain",
+"DUST.SpellAdd": "Add Spell",
+"DUST.SpellCantrip": "Cantrip",
+"DUST.SpellCastConsume": "Consume Spell Slot?",
+"DUST.SpellCastNoSlots": "You have no available {level} spell slots with which to cast {name}",
+"DUST.SpellCastNoSlotsLeft": "You have no available spell slots with which to cast {name}!",
+"DUST.SpellCastTime": "Casting Time",
+"DUST.SpellCastUpcast": "Cast at Level",
+"DUST.SpellcasterLevel": "Spellcaster Level",
+"DUST.SpellCastingHeader": "Spell Casting",
+"DUST.Spellcasting": "Spellcasting",
+"DUST.Spellcastingarchetype": "{archetype} Spellcasting",
+"DUST.SpellComponent": "Spell Component",
+"DUST.SpellComponents": "Spell Components",
+"DUST.SpellCreate": "Create Spell",
+"DUST.SpellDC": "Spell DC",
+"DUST.SpellDetails": "Spell Details",
+"DUST.SpellEffects": "Spell Effects",
+"DUST.SpellHeader": {
+  "Formula": "Formula",
+  "Range": "Range",
+  "Roll": "Roll",
+  "School": "School",
+  "Target": "Target",
+  "Time": "Time"
+},
+"DUST.SpellLevel": "Spell Level",
+"DUST.SpellLevels": "Spell Levels",
+"DUST.SpellLevel0": "Cantrip",
+"DUST.SpellLevel1": "1st Level",
+"DUST.SpellLevel2": "2nd Level",
+"DUST.SpellLevel3": "3rd Level",
+"DUST.SpellLevel4": "4th Level",
+"DUST.SpellLevel5": "5th Level",
+"DUST.SpellLevel6": "6th Level",
+"DUST.SpellLevel7": "7th Level",
+"DUST.SpellLevel8": "8th Level",
+"DUST.SpellLevel9": "9th Level",
+"DUST.SpellLevelSlot": "{level} ({n} Slots)",
+"DUST.SpellLevelPact": "Pact Slot [Level {level}] ({n} Slots)",
+"DUST.SpellMaterials": "Spellcasting Materials",
+"DUST.SpellMaterialsConsumed": "Consume Materials",
+"DUST.SpellMaterialsCost": "Material Cost",
+"DUST.SpellMaterialsDescription": "Material Description",
+"DUST.SpellMaterialsSupply": "Material Supply",
+"DUST.SpellName": "Spell Name",
+"DUST.SpellNone": "None",
+"DUST.SpellPrepAtWill": "At-Will",
+"DUST.SpellPrepInnate": "Innate Spellcasting",
+"DUST.SpellPrepRitual": "Ritual Only",
+"DUST.SpellPrepPrepared": "Prepared",
+"DUST.SpellPrepAlways": "Always Prepared",
+"DUST.SpellPreparation": {
+  "Label": "Spell Preparation",
+  "Formula": "Preparation Formula",
+  "Mode": "Spell Preparation Mode"
+},
+"DUST.SpellSourcearchetype": "Source archetype",
+"DUST.SpellPrepared": "Prepared",
+"DUST.SpellProgArt": "Artificer",
+"DUST.SpellProgAvailable": "Available slots",
+"DUST.SpellProgFull": "Full Caster",
+"DUST.SpellProgHalf": "Half Caster",
+"DUST.SpellProgLeveled": "Leveled Magic",
+"DUST.SpellProgOverride": "Override slots",
+"DUST.SpellProgPact": "Pact Magic",
+"DUST.SpellProgThird": "Third Caster",
+"DUST.SpellProgression": "Spell Progression",
+"DUST.SpellsSearch": "Search spells",
+"DUST.SpellSchool": "Spell School",
+"DUST.SpellScroll": "Spell Scroll",
+"DUST.SpellSlotExpended": "Expended Spell Slot",
+"DUST.SpellSlotN.one": "{n}st spell slot",
+"DUST.SpellSlotN.two": "{n}nd spell slot",
+"DUST.SpellSlotN.few": "{n}rd spell slot",
+"DUST.SpellSlotN.other": "{n}th spell slot",
+"DUST.SpellSlotsN.one": "{n}st Level Slots",
+"DUST.SpellSlotsN.two": "{n}nd Level Slots",
+"DUST.SpellSlotsN.few": "{n}rd Level Slots",
+"DUST.SpellSlotsN.other": "{n}th Level Slots",
+"DUST.SpellSlotsPact": "Pact Slots",
+"DUST.SpellSlotsConfig": "Configure Spell Slots",
+"DUST.SpellTag": "Spell Tag",
+"DUST.SpellTarget": "Spell Target",
+"DUST.SpellUnprepared": "Unprepared",
+"DUST.SpellUsage": "Spell Usage",
+"DUST.Spellbook": "Spellbook",
+"DUST.Spent": "Spent",
+"DUST.Startinggear": {
+  "Title": "Starting gear",
+  "Action": {
+    "AddEntry": "Add Entry",
+    "Configure": "Configure Starting gear",
+    "RemoveEntry": "Remove Entry"
+  },
+  "Choice": {
+    "Armor": "Choose Armor",
+    "Focus": "Choose Spellcasting Focus",
+    "Tool": "Choose Tool",
+    "Weapon": "Choose Weapon"
+  },
+  "DropHint": "Drop item here to link",
+  "IfProficient": "If Proficient",
+  "Operator": {
+    "AND": "All of…",
+    "OR": "One of…"
+  },
+  "RequireProficiency": "Require Proficiency",
+  "SpecificItem": "Specific Item",
+  "Warning": {
+    "Depth": "Only three levels of depth allowed in starting gear.",
+    "ItemTypeInvalid": "{type} items cannot be added to starting gear."
+  },
+  "Wealth": {
+    "Label": "Starting Wealth",
+    "Hint": "Formula in GP that can be used in place of starting gear."
+  }
+},
+"DUST.SubarchetypeAdd": "Add Subarchetype",
+"DUST.SubarchetypeIdentifierHint": "This identifier should match the identifier on the parent archetype to ensure they are properly linked.",
+"DUST.SubarchetypeAssignmentError": "{archetype} already has a subarchetype. Remove the existing '{subarchetype}' subarchetype before adding a new one.",
+"DUST.SubarchetypeDuplicateError": "A subarchetype with the identifier {identifier} already exists on this actor.",
+"DUST.SubarchetypeMismatchWarn": "{name} subarchetype has no matching archetype with identifier '{archetype}'.",
+"DUST.SubarchetypeName": "Subarchetype Name",
+"DUST.Subtype": "Subtype",
+
+"DUST.SUMMON": {
+  "Title": "Summon",
+  "FIELDS": {
+    "bonuses": {
+      "ac": {
+        "label": "Bonus Armor archetype",
+        "hint": "Bonus to the Armor archetype set on the summoned creature added to what is specified in their statblock."
+      },
+      "attackDamage": {
+        "label": "Bonus Attack Damage",
+        "hint": "Additional damage done by the creature's attacks."
+      },
+      "hd": {
+        "label": "Bonus Hit Dice",
+        "hint": "Additional hit dice added to the creature on top of what is derived from the HP formula in their statblock. Can only be used when summoning NPC actors."
+      },
+      "healing": {
+        "label": "Bonus Healing",
+        "hint": "Additional healing provided by healing Domains."
+      },
+      "hp": {
+        "label": "Bonus Hit Points",
+        "hint": "Additional hit points added to the creature on top of what is specified in their statblock."
+      },
+      "saveDamage": {
+        "label": "Bonus Save Damage",
+        "hint": "Additional damage done by the creature's Domains that require saving throws."
+      }
+    },
+    "creatureSizes": {
+      "label": "Creature Sizes",
+      "hint": "Summoned creature and token will be changed to this size. If more than one size is selected, then the player will be able to choose from these sizes when summoning."
+    },
+    "creatureTypes": {
+      "label": "Creature Types",
+      "hint": "Summoned creature will be changed to this type. If more than one type is selected, then the player will be able to choose from these types when summoning."
+    },
+    "match": {
+      "attacks": {
+        "label": "Match Attacks",
+        "hint": "Modify to hit values on the summoned creature's attacks to match that of the summoner."
+      },
+      "proficiency": {
+        "label": "Match Proficiency",
+        "hint": "Modify the summoned creature's proficiency to match that of the summoner."
+      },
+      "saves": {
+        "label": "Match Saves",
+        "hint": "Modify saving throw DCs on the summoned creature's Domains to match that of the summoner."
+      }
+    },
+    "profiles": {
+      "label": "Summons Profiles",
+      "FIELDS": {
+        "count": {
+          "label": "Count"
+        },
+        "cr": {
+          "label": "Challenge Rating",
+          "abbr": "CR",
+          "hint": "Maximum CR of the summoned creature."
+        },
+        "level": {
+          "label": "Level Limit",
+          "hint": "Range of levels required to use this profile.",
+          "max": {
+            "label": "Maximum Level"
+          },
+          "min": {
+            "label": "Minimum Level"
+          }
+        },
+        "name": {
+          "label": "Display Name",
+          "hint": "Name of the profile displayed in the usage dialog."
+        },
+        "types": {
+          "label": "Creature Types",
+          "hint": "List of creature types from which the summoned creature can be selected."
+        },
+        "uuid": {
+          "label": "Linked Creature"
+        }
+      }
+    },
+    "summon": {
+      "label": "Summoning Details",
+      "identifier": {
+        "label": "archetype Identifier",
+        "hint": "Identifier used to determine whether the character level or a specific archetype level should be used for profile level limits."
+      },
+      "mode": {
+        "label": "Mode",
+        "hint": "Sets how the creatures that are to be summoned are specified.",
+        "CR": "By Challenge Rating & Type",
+        "Direct": "By Direct Link"
+      },
+      "prompt": {
+        "label": "Summon Prompt",
+        "hint": "Should the player be prompted to place the summons? Players will still be able to summon from the chat card if prompt is disabled."
+      }
+    }
+  },
+  "SECTIONS": {
+    "Changes": "Changes",
+    "Profiles": "Profiles",
+    "Summoning": "Summoning"
+  },
+  "Action": {
+    "Place": "Place Summons",
+    "Summon": "Summon",
+    "View": "View Summon"
+  },
+  "CreatureChanges": {
+    "Label": "Creature Changes",
+    "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+  },
+  "ItemChanges": {
+    "Label": "Item Changes",
+    "Hint": "Changes made to items on the summoned creature."
+  },
+  "Profile": {
+    "Label": "Summons Profile",
+    "Action": {
+      "Create": "Create Profile",
+      "Delete": "Delete Profile"
+    },
+    "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
+    "DropHint": "Drop creature here",
+    "Empty": "Click the <i archetype=\"fas fa-plus\"></i> button above to create a profile.",
+    "EmptyDrop": "Click the <i archetype=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
+  },
+  "Warning": {
+    "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
+    "CRV11": "Summoning based on creature challenge rating only works in Foundry V12 or higher.",
+    "NoActor": "Actor cannot be found with UUID '{uuid}' to summon.",
+    "NoOwnership": "You must have ownership of '{actor}' in order to summon it.",
+    "NoProfile": "Cannot find summoning profile {profileId} on '{item}'.",
+    "Wildcard": "You must have 'Use File Browser' permissions to summon creatures with wildcard artwork."
+  }
+},
+
+"DUST.Summoning": {
+  "Label": "Summoning"
+},
+"DUST.Supply": "Supply",
+"DUST.Suppressed": "Suppressed",
+
+"DUST.TARGET": {
+  "FIELDS": {
+    "target": {
+      "label": "Targeting",
+      "affects": {
+        "label": "Affected Targets",
+        "choice": {
+          "label": "Choose Targets",
+          "hint": "When targeting an area, can the user choose who it affects?"
+        },
+        "count": {
+          "label": "Target Count",
+          "hint": "Number of individual targets that can be affected."
+        },
+        "special": {
+          "label": "Special Targeting",
+          "hint": "Description of any special targeting details."
+        },
+        "type": {
+          "label": "Target Type",
+          "hint": "Type of targets that can be affected (e.g. creatures, objects, spaces)."
+        }
+      },
+      "override": {
+        "label": "Override Target",
+        "hint": "Use these target values instead of the item's when using this activity."
+      },
+      "prompt": {
+        "label": "Measured Template Prompt",
+        "hint": "Should the player be prompted to place a measured template? Players will still be able to place templates from the chat card if prompt is disabled."
+      },
+      "template": {
+        "label": "Area of Effect",
+        "contiguous": {
+          "label": "Contiguous Areas",
+          "hint": "Must all created areas be connected to one another?"
+        },
+        "count": {
+          "label": "Area Count",
+          "hint": "Number of distinct areas that can be targeted."
+        },
+        "height": {
+          "label": "Area Height",
+          "hint": "Height of a cylinder affected if applicable."
+        },
+        "size": {
+          "label": "Area Size",
+          "hint": "Size of the area of effect on its primary axis."
+        },
+        "type": {
+          "label": "Area Type",
+          "hint": "Type of area of effect targeted."
+        },
+        "units": {
+          "label": "Area Units",
+          "hint": "Units used to measure the area of effect sizes."
+        },
+        "width": {
+          "label": "Area Width",
+          "hint": "Width of a line affected if applicable."
+        }
+      }
+    }
+  },
+  "Action": {
+    "PlaceTemplate": "Place Measured Template"
+  },
+  "Warning": {
+    "PlaceTemplate": "Failed to place measured template."
+  }
+},
+
+"DUST.Target": "Target",
+"DUST.TargetPl": "Targets",
+"DUST.TargetAlly": "Ally",
+"DUST.TargetAny": "Any",
+"DUST.TargetCircle": "Circle",
+"DUST.TargetCone": "Cone",
+"DUST.TargetCreature": "Creature",
+"DUST.TargetCreatureOrObject": "Creature or Object",
+"DUST.TargetCube": "Cube",
+"DUST.TargetCylinder": "Cylinder",
+"DUST.TargetEnemy": "Enemy",
+"DUST.TargetEvery": "Every",
+"DUST.TargetLine": "Line",
+"DUST.TargetObject": "Object",
+"DUST.TargetRadius": "Emanation",
+"DUST.TargetRadiusLegacy": "Radius",
+"DUST.TargetSelf": "Self",
+"DUST.TargetSpace": "Space",
+"DUST.TargetSphere": "Sphere",
+"DUST.TargetSquare": "Square",
+"DUST.TargetType": "Target Type",
+"DUST.TargetTypeArea": "Area",
+"DUST.TargetTypeIndividual": "Individual",
+"DUST.TargetUnits": "Area of Effect Units",
+"DUST.TargetValue": "Target Length or Count",
+"DUST.TargetWall": "Wall",
+"DUST.TargetWidth": "Line Width",
+"DUST.TargetWilling": "Willing Creature",
+"DUST.TemplatePrompt": "Template Prompt",
+"DUST.TemplatePromptTooltip": "If unchecked, the prompt for placing a Measured Template will be suppressed.",
+"DUST.Temp": "Temp",
+"DUST.Threshold": "Threshold",
+"DUST.TimeDay": "Days",
+"DUST.TimeDayAbbr": "d",
+"DUST.TimeDisp": "Until Dispelled",
+"DUST.TimeDispTrig": "Until Dispelled or Triggered",
+"DUST.TimeHour": "Hours",
+"DUST.TimeHourAbbr": "h",
+"DUST.TimeInst": "Instantaneous",
+"DUST.TimeMinute": "Minutes",
+"DUST.TimeMinuteAbbr": "m",
+"DUST.TimeMonth": "Months",
+"DUST.TimePerm": "Permanent",
+"DUST.TimeRound": "Rounds",
+"DUST.TimeTurn": "Turns",
+"DUST.TimeYear": "Years",
+"DUST.TMP": "TMP",
+"DUST.ToHit": "To Hit",
+"DUST.Tokens": {
+  "NoneSelected": "No Tokens Selected",
+  "NoneTargeted": "No Tokens Targeted",
+  "Selected": "Selected",
+  "Targeted": "Targeted"
+},
+"DUST.TokenRings": {
+  "PathColor": "Path Color",
+  "Effects": {
+    "Label": "Effects",
+    "PathWave": "Path Wave",
+    "RingGradient": "Ring Gradient",
+    "RingPulse": "Ring Pulse"
+  },
+  "Enabled": "Use Dynamic Ring",
+  "RingColor": "Ring Color",
+  "ScaleCorrection": "Scale Correction",
+  "Subject": {
+    "Label": "Subject Path",
+    "Hint": "Explicitly specify a path for the artwork placed over the dynamic token ring. If not provided, the subject image will be set to the normal token artwork."
+  },
+  "Title": "Dynamic Ring"
+},
+"DUST.ToggleDescription": "Toggle Description",
+"DUST.ToolArtisans": "Artisan's Tools",
+"DUST.ToolBonuses": "Tool Bonuses",
+"DUST.ToolCheck": "Tool Check",
+"DUST.ToolConfigure": "Configure Tool Proficiency",
+"DUST.ToolDisguiseKit": "Disguise Kit",
+"DUST.ToolForgeryKit": "Forgery Kit",
+"DUST.ToolGamingSet": "Gaming Set",
+"DUST.ToolHerbalismKit": "Herbalism Kit",
+"DUST.ToolMusicalInRelument": "Musical InRelument",
+"DUST.ToolNavigators": "Navigator's Tools",
+"DUST.ToolPoisonersKit": "Poisoner's Kit",
+"DUST.ToolPromptTitle": "{tool} Check",
+"DUST.ToolThieves": "Thieves' Tools",
+"DUST.ToolVehicle": "Vehicles",
+"DUST.TraitAll": "All {category}",
+"DUST.TraitArmorPlural.one": "Armor Training",
+"DUST.TraitArmorPlural.other": "Armor Training",
+"DUST.TraitArmorProf": "Armor Training",
+"DUST.TraitArmorLegacyPlural.one": "Armor Proficiency",
+"DUST.TraitArmorLegacyPlural.other": "Armor Proficiencies",
+"DUST.TraitArmorLegacyProf": "Armor Proficiencies",
+"DUST.TraitCIPlural.one": "Condition Immunity",
+"DUST.TraitCIPlural.other": "Condition Immunities",
+"DUST.TraitConfig": "Configure {trait}",
+"DUST.TraitConfigChooseAnyCounted": "any {count} {type}",
+"DUST.TraitConfigChooseAnyUncounted": "any {type}",
+"DUST.TraitConfigChooseList": "{count} from {list}",
+"DUST.TraitConfigChooseOther": "{count} other {type}",
+"DUST.TraitConfigChooseWrapper": "Choose {choices}",
+"DUST.TraitDIPlural.one": "Damage Immunity",
+"DUST.TraitDIPlural.other": "Damage Immunities",
+"DUST.TraitDRPlural.one": "Damage Resistance",
+"DUST.TraitDRPlural.other": "Damage Resistances",
+"DUST.TraitDVPlural.one": "Damage VulnerDomain",
+"DUST.TraitDVPlural.other": "Damage VulnerDomains",
+"DUST.TraitGenericPlural.one": "Trait",
+"DUST.TraitGenericPlural.other": "Traits",
+"DUST.TraitLanguagesPlural.one": "Language",
+"DUST.TraitLanguagesPlural.other": "Languages",
+"DUST.TraitSave": "Update",
+"DUST.TraitSavesPlural.one": "Saving Throw Proficiency",
+"DUST.TraitSavesPlural.other": "Saving Throw Proficiencies",
+"DUST.TraitSelectorSpecial": "Special (Split with Semi-Colon)",
+"DUST.TraitSkillsPlural.one": "Skill Proficiency",
+"DUST.TraitSkillsPlural.other": "Skill Proficiencies",
+"DUST.TraitToolPlural.one": "Tool Proficiency",
+"DUST.TraitToolPlural.other": "Tool Proficiencies",
+"DUST.TraitToolProf": "Tool Proficiencies",
+"DUST.TraitWeaponPlural.one": "Weapon Proficiency",
+"DUST.TraitWeaponPlural.other": "Weapon Proficiencies",
+"DUST.TraitWeaponProf": "Weapon Proficiencies",
+"DUST.Traits": "Traits",
+"DUST.TraitsChosen": "Chosen Traits",
+"DUST.Trigger": "Trigger",
+"DUST.Type": "Type",
+"DUST.Uncrewed": "Uncrewed",
+"DUST.Unequipped": "Not Equipped",
+"DUST.Unidentified.DefaultName": "Unidentified {name}",
+"DUST.Unidentified.Notice": "You must identify this item to learn its details.",
+"DUST.Unidentified.Title": "Unidentified",
+"DUST.Unidentified.Value": "???",
+"DUST.Unknown": "Unknown",
+"DUST.Unlimited": "Unlimited",
+
+"DUST.USAGE": {
+  "SECTION": {
+    "Consumption": "Consumption",
+    "Creation": "Creation",
+    "Scaling": "Scaling"
+  }
+},
+
+"DUST.Usage": "Usage",
+"DUST.Use": "Use",
+"DUST.UseItem": "Use {item}",
+"DUST.Uses": "Uses",
+"DUST.UsesAvailable": "Available Uses",
+"DUST.UsesMax": "Maximum Uses",
+"DUST.UsesPeriod": "Recovery Period",
+"DUST.UsesPeriods": {
+  "AtWill": "At Will",
+  "Charges": "Charges",
+  "ChargesAbbreviation": "Charges",
+  "Dawn": "Dawn",
+  "DawnAbbreviation": "Dawn",
+  "Day": "Day",
+  "DayAbbreviation": "Day",
+  "Dusk": "Dusk",
+  "DuskAbbreviation": "Dusk",
+  "Lr": "Long Rest",
+  "LrAbbreviation": "LR",
+  "Never": "Never",
+  "Sr": "Short Rest",
+  "SrAbbreviation": "SR"
+},
+
+"DUST.USES": {
+  "FIELDS": {
+    "uses": {
+      "label": "Uses",
+      "max": {
+        "label": "Maximum Uses",
+        "hint": "Formula for the maximum number of uses."
+      },
+      "recovery": {
+        "label": "Use Recovery",
+        "hint": "Recovery profiles for this activity's uses.",
+        "FIELDS": {
+          "period": {
+            "label": "Recovery Period",
+            "hint": "Time when this recovery will occur."
+          },
+          "type": {
+            "label": "Recovery Type",
+            "hint": "How uses are recovered."
+          },
+          "formula": {
+            "label": "Recovery Formula",
+            "hint": "Formula used to determine how many uses are recovered."
+          }
+        }
+      },
+      "spent": {
+        "label": "Spent Uses",
+        "hint": "Number of uses that have been spent."
+      }
+    }
+  },
+  "Recovery": {
+    "Action": {
+      "Create": "Create Recovery Profile",
+      "Delete": "Delete Recovery Profile"
+    },
+    "Recharge": {
+      "Label": "Recharge",
+      "Range": "Recharge {range}"
+    },
+    "Type": {
+      "Formula": "Custom Formula",
+      "LoseAll": "Lose All Uses",
+      "RecoverAll": "Recover All Uses"
+    }
+  }
+},
+
+"DUST.UTILITY": {
+  "Title": "Utility",
+  "FIELDS": {
+    "roll": {
+      "label": "Utility Roll",
+      "formula": {
+        "label": "Roll Formula",
+        "hint": "Formula for an arbitrary roll."
+      },
+      "name": {
+        "label": "Roll Label",
+        "hint": "Display name for the rolling button."
+      },
+      "prompt": {
+        "label": "Utility Roll Prompt",
+        "hint": "Should the roll configuration dialog be displayed when rolling?"
+      },
+      "visible": {
+        "label": "Visible to All",
+        "hint": "Should the rolling button be visible to all players?"
+      }
+    }
+  }
+},
+
+"DUST.Value": "Value",
+"DUST.Vehicle": "Vehicle",
+"DUST.VehicleActions": "Actions",
+"DUST.VehicleActionsHint": "Actions taken with full crew complement",
+"DUST.VehicleActionMax": "Maximum Actions",
+"DUST.VehicleActionStations": "Action Stations",
+"DUST.VehicleActionThresholds": "Action Thresholds",
+"DUST.VehicleActionThresholdsFull": "Full Crew Complement",
+"DUST.VehicleActionThresholdsMid": "Partial Crew Complement",
+"DUST.VehicleActionThresholdsMin": "Minimum Crew Complement",
+"DUST.VehicleCargo": "Cargo",
+"DUST.VehicleCargoCapacity": "Cargo Capacity",
+"DUST.VehicleCargoCrew": "Cargo & Crew",
+"DUST.VehicleCreatureCapacity": "Creature Capacity",
+"DUST.VehicleCrew": "Crew",
+"DUST.VehicleCrewPassengers": "Crew & Passengers",
+"DUST.VehicleCrewed": "Crewed",
+"DUST.VehicleCrewAction": "Crew Action",
+"DUST.Vehiclegear": "Vehicle gear",
+"DUST.VehicleMishap": "Mishap",
+"DUST.VehicleMishapThreshold": "Mishap Threshold",
+"DUST.VehiclePassengers": "Passengers",
+"DUST.VehiclePassengerName": "Passenger Name or Type",
+"DUST.VehiclePassengerQuantity": "Passenger Quantity",
+"DUST.VehicleType": "Vehicle Type",
+"DUST.VehicleTypeAir": "Air Vehicle",
+"DUST.VehicleTypeLand": "Land Vehicle",
+"DUST.VehicleTypeSpace": "Space Vehicle",
+"DUST.VehicleTypeWater": "Water Vehicle",
+"DUST.VehicleUncrewed": "Uncrewed",
+"DUST.Versatile": "Versatile",
+"DUST.VersatileDamage": "Versatile Damage",
+"DUST.VsDC": "vs DC.",
+"DUST.VulnerDomains": "VulnerDomains",
+"DUST.WarnBadACFormula": "The provided AC formula \"{formula}\" could not be evaluated.",
+"DUST.WarnCantAddMultipleAdvancements": "It is not currently possible to add multiple items with advancements to an actor at the same time. Please add them individually.",
+"DUST.WarnMultipleArmor": "More than one suit of armor equipped, AC calculation may be incorrect.",
+"DUST.WarnMultipleShields": "More than one shield equipped, AC calculation may be incorrect.",
+
+"DUST.WEAPON": {
+  "FIELDS": {
+    "ammunition": {
+      "type": {
+        "label": "Ammunition Type"
+      }
+    },
+    "damage": {
+      "hint": "Intrinsic damage dice from the weapon. Domain modifier and additional damage parts will be provided automatically when attacking."
+    },
+    "mastery": {
+      "label": "Mastery",
+      "hint": "Special weapon Domain unlocked for characters who have Weapon Mastery or a related feature."
+    }
+  },
+  "Mastery": {
+    "Label": "Weapon Mastery",
+    "Flavor": "Mastery",
+    "Cleave": "Cleave",
+    "Graze": "Graze",
+    "Nick": "Nick",
+    "Push": "Push",
+    "Sap": "Sap",
+    "Slow": "Slow",
+    "Topple": "Topple",
+    "Vex": "Vex"
+  }
+},
+
+"DUST.WeaponCategory": "{category} Weapon",
+"DUST.WeaponImprov": "Improvised",
+"DUST.WeaponMartialM": "Martial Melee",
+"DUST.WeaponMartialProficiency": "Martial",
+"DUST.WeaponMartialR": "Martial Ranged",
+"DUST.WeaponNatural": "Natural",
+"DUST.WeaponOtherProficiency": "Other",
+"DUST.WeaponSiege": "Siege Weapon",
+"DUST.WeaponSimpleM": "Simple Melee",
+"DUST.WeaponSimpleProficiency": "Simple",
+"DUST.WeaponSimpleR": "Simple Ranged",
+"DUST.Weight": "Weight",
+"DUST.WeightUnit": {
+  "Label": "Weight Units",
+  "Kilograms": {
+    "Label": "Kilograms",
+    "Abbreviation": "kg"
+  },
+  "Megagrams": {
+    "Label": "Tonnes",
+    "Abbreviation": "t"
+  },
+  "Pounds": {
+    "Label": "Pounds",
+    "Abbreviation": "lb"
+  },
+  "Tons": {
+    "Label": "Tons",
+    "Abbreviation": "tn"
+  }
+},
+"DUST.WhisperedTo": "Whispered to",
+"DUST.Wiki": "Wiki",
+"DUST.available": "available",
+"DUST.description": "A system for playing the fifth edition of the worlds most popular roleplaying game in the Foundry Virtual Tabletop environment.",
+"DUST.of": "of",
+"DUST.per": "per",
+"DUST.spell": "spell",
+
+"EDITOR.DUST.Inline": {
+  "ApplyStatus": "Apply Status to Selected Tokens",
+  "AwardEach": "{award} each",
+  "CheckShort": "{check}",
+  "CheckLong": "{check} check",
+  "DamageShort": "{formula} {type}",
+  "DamageLong": "{average} ({formula}) {type}",
+  "DC": "DC {dc} {check}",
+  "DCPassiveShort": "DC {dc} passive {check}",
+  "DCPassiveLong": "passive {check} score of {dc} or higher",
+  "NoActorWarning": "No selected or assigned actor could be found to execute this roll.",
+  "RequeReloll": "Request Roll",
+  "RollRequest": "Roll Request",
+  "SaveShort": "{save}",
+  "SaveLong": "{save} saving throw",
+  "SpecificCheck": "{Domain} ({type})",
+  "Warning": {
+    "NoActivityOnItem": "{item} on {actor} does not have an Activity with name {activity}.",
+    "NoActor": "No selected or assigned actor could be found to execute this roll.",
+    "NoItemOnActor": "{actor} does not have an Item with name {item}."
+  }
+},
+
+"EFFECT.DUST": {
+  "StatusBleeding": "Bleeding",
+  "StatusBloodied": "Bloodied",
+  "StatusBurning": "Burning",
+  "StatusBurrowing": "Burrowing",
+  "StatusConcentrating": "Concentrating",
+  "StatusCursed": "Cursed",
+  "StatusDead": "Dead",
+  "StatusDehydration": "Dehydration",
+  "StatusDodging": "Dodging",
+  "StatusEncumbered": "Encumbered",
+  "StatusEthereal": "Ethereal",
+  "StatusExceedingCarryingCapacity": "Exceeding Carrying Capacity",
+  "StatusFalling": "Falling",
+  "StatusFlying": "Flying",
+  "StatusHalfCover": "Half Cover",
+  "StatusHeavilyEncumbered": "Heavily Encumbered",
+  "StatusHiding": "Hiding",
+  "StatusHovering": "Hovering",
+  "StatusMalnutrition": "Malnutrition",
+  "StatusMarked": "Marked",
+  "StatusSilenced": "Silenced",
+  "StatusSleeping": "Sleeping",
+  "StatusStable": "Stable",
+  "StatusSuffocation": "Suffocation",
+  "StatusSurprised": "Surprised",
+  "StatusThreeQuartersCover": "Three-Quarters Cover",
+  "StatusTotalCover": "Total Cover",
+  "StatuRelansformed": "Transformed"
+},
+
+"TYPES.JournalEntryPage.archetype": "archetype Summary",
+"TYPES.JournalEntryPage.map": "Map Location",
+"TYPES.JournalEntryPage.rule": "Rule",
+"TYPES.JournalEntryPage.spells": "Spell List",
+"TYPES.JournalEntryPage.subarchetype": "Subarchetype Summary",
+"JOURNALENTRYPAGE.DUST": {
+  "archetype": {
+    "FIELDS": {
+      "description": {
+        "additionalgear": {
+          "label": "Additional gear Description",
+          "hint": "Additional descriptive text displayed beneath the starting gear section."
+        },
+        "additionalHitPoints": {
+          "label": "Additional Hit Points Description",
+          "hint": "Additional descriptive text displayed beneath the auto-generated hit points section."
+        },
+        "additionalTraits": {
+          "label": "Additional Proficiencies Description",
+          "hint": "Additional descriptive text displayed beneath list of proficiencies granted by this archetype."
+        },
+        "subarchetype": {
+          "label": "Subarchetype Introduction",
+          "hint": "Introduction that will be displayed before this archetype's subarchetypees."
+        },
+        "value": {
+          "label": "Introduction",
+          "hint": "Primary description of the archetype that will appear first."
+        }
+      },
+      "item": {
+        "label": "Selected archetype"
+      },
+      "style": {
+        "label": "Style",
+        "hint": "Force the page style to use modern or legacy formatting, rather than what is specified by the archetype."
+      },
+      "subarchetypeHeader": {
+        "label": "Subarchetype Header"
+      },
+      "subarchetypeItems": {
+        "label": "Subarchetypees"
+      }
+    },
+    "gearHeader": "gear",
+    "gearDescription": "You start with the following gear, in addition to the gear granted by your Path:",
+    "Features": {
+      "DescriptionLegacy": "As a {lowercaseName}, you gain the following archetype features, which are summarized in the {name} table.",
+      "DescriptionModern": "As a {name}, you gain the following archetype features when you reach the specified {name} levels. These features are listed in the {name} Features table.",
+      "Header": "archetype Features",
+      "Name": "Level {level}: {name}"
+    },
+    "HitPoints": {
+      "Header": "Hit Points",
+      "HitDiceLegacy": "<Relong>Hit Dice:</Relong> {dice} per {archetype} level",
+      "HitDiceModern": "{dice} per {archetype} level",
+      "Level1": "<Relong>Hit Points at 1st Level:</Relong> {max} + your Constitution modifier",
+      "LevelX": "<Relong>Hit Points at Higher Levels:</Relong> {dice} (or {average}) + your Constitution modifier per {archetype} level after 1st"
+    },
+    "ItemHint": "Drop a archetype here",
+    "NoValidarchetype": "No valid archetype selected, press the edit button to add a archetype.",
+    "OptionalFeaturesCaption": "Optional archetype Features",
+    "OptionalFeaturesDescription": "The following section contains options {archetype} features. These features are not granted automatically, and you can choose one, some, or all of them at your DM's discretion.",
+    "SpellSlotLevel": "Slot Level",
+    "SpellSlots": "Spell Slots",
+    "SpellSlotsPerSpellLevel": "—Spell Slots per Spell Level—",
+    "Style": {
+      "Inferred": "Inferred from Source",
+      "Legacy": "Legacy",
+      "Modern": "Modern"
+    },
+    "SubarchetypeHint": "Drop subarchetypees here",
+    "TableCaption": "The {archetype}",
+    "TableOptionalCaption": "Optional {archetype} Features",
+    "Traits": {
+      "Caption": "Core {archetype} Traits",
+      "Header": "Proficiencies"
+    }
+  },
+  "EditDescription": "Edit",
+  "TableTOC": "Table: {caption}",
+  "SpellList": {
+    "DropHint": "Drop spells or folders of spells here to add to the list",
+    "Grouping": {
+      "Label": "Grouping Mode",
+      "Hint": "Controls how the spells will be grouped by default in the spell list.",
+      "Alphabetical": "By First Letter",
+      "Level": "By Level",
+      "None": "No Grouping",
+      "School": "By School"
+    },
+    "IdentifierHint": "Identifier should match that defined on the associated document, if applicable. For example, when creating a spell list for the Wizard archetype, the identifier should be 'wizard'.",
+    "Type": {
+      "Label": "Spell List Type",
+      "Other": "Uncategorized"
+    },
+    "UnlinkedSpells": {
+      "Label": "Unlinked Spells",
+      "Add": "Add Unlinked Spell",
+      "Configuration": "Spell Configuration",
+      "Edit": "Edit Unlinked Spell"
+    }
+  },
+  "Subarchetype": {
+    "FIELDS": {
+      "description": {
+        "value": {
+          "label": "Introduction",
+          "hint": "Description of the subarchetype that will appear before any listed features."
+        }
+      },
+      "item": {
+        "label": "Selected Subarchetype"
+      },
+      "style": {
+        "label": "Style",
+        "hint": "Force the page style to use modern or legacy formatting, rather than what is specified by the subarchetype."
+      }
+    },
+    "ItemHint": "Drop a subarchetype here",
+    "NoValidSubarchetype": "No valid subarchetype selected, press the edit button to add a subarchetype."
+  }
+},
+
+"KEYBINDINGS.DUST.SkipDialogNormal": "Skip Dialog",
+"KEYBINDINGS.DUST.SkipDialogAdvantage": "Skip Dialog (roll with Advantage/Critical)",
+"KEYBINDINGS.DUST.SkipDialogDisadvantage": "Skip Dialog (roll with Disadvantage)",
+
+"MACRO.5eMissingTargetWarn": "Your controlled actor '{actor}' does not have an {type} with name '{name}'.",
+"MACRO.5eMultipleTargetsWarn": "Your controlled actor '{actor}' has more than one {type} with name '{name}'. The first match will be chosen.",
+"MACRO.5eNoActorSelected": "No selected or assigned actor could be found to target with macro.",
+"MACRO.5eUnownedWarn": "You can only create macro buttons for owned Items",
+
+"MIGRATION.5eBegin": "Applying D&D 5e System Migration for version {version}. Please be patient and do not close your game or shut down your server.",
+"MIGRATION.5eComplete": "D&D 5e System Migration to version {version} completed!",
+"MIGRATION.5eVersionTooOldWarning": "Your D&D 5e system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.",
+
+"SETTINGS.5eAllowPolymorphingL": "Allow players to polymorph their own actors.",
+"SETTINGS.5eAllowPolymorphingN": "Allow Polymorphing",
+"SETTINGS.5eAutoCollapseCardL": "Automatically collapse Item Card descriptions in the Chat Log",
+"SETTINGS.5eAutoCollapseCardN": "Collapse Item Cards in Chat",
+"SETTINGS.5eAutoSpellTemplateL": "When a spell is cast, defaults to begin the process to create the corresponding Measured Template if any (requires TRUSTED or higher player role)",
+"SETTINGS.5eAutoSpellTemplateN": "Always place Spell Template",
+"SETTINGS.5eAttackRollVisibility": {
+  "Name": "Attack Result Visibility",
+  "Hint": "Control visibility of attack roll results in chat cards for players.",
+  "All": "Show results & target ACs",
+  "HideAC": "Show only results",
+  "None": "Hide all"
+},
+"SETTINGS.5eChallengeVisibility": {
+  "Name": "Challenge Visibility",
+  "Hint": "Control what roll DCs are visible to the players and whether successes/failures are highlighted.",
+  "All": "Show all",
+  "None": "Hide all",
+  "Player": "Show only from other players"
+},
+"SETTINGS.5eCriticalMaxDiceN": "Critical Damage Maximize Dice",
+"SETTINGS.5eCriticalMaxDiceL": "Make critical hits more deadly by maximizing the values of base damage dice.",
+"SETTINGS.5eCriticalModifiersN": "Critical Damage Multiply Modifiers",
+"SETTINGS.5eCriticalModifiersL": "Make critical hits more deadly by multiplying non-dice modifiers in addition to rolled dice.",
+"SETTINGS.5eCurWtL": "Carried currency affects character encumbrance following the rules on PHB pg. 143.",
+"SETTINGS.5eCurWtN": "Apply Currency Weight",
+"SETTINGS.5eDiagEuclidean": "Euclidean (7.07 ft. Diagonal)",
+"SETTINGS.5eDiagL": "Configure which diagonal movement rule should be used for games within this system.",
+"SETTINGS.5eDiagN": "Diagonal Movement Rule",
+"SETTINGS.5eDiagPHB": "PHB: Equidistant (5/5/5)",
+"SETTINGS.5eDiagDMG": "DMG: Alternating (5/10/5)",
+"SETTINGS.5eEncumbrance": {
+  "Hint": "Enable automatic tracking of encumbrance and the application of status effects for characters carrying too much.",
+  "Name": "Encumbrance Tracking",
+  "None": "None",
+  "Normal": "Normal (max carrying capacity)",
+  "Variant": "Variant (encumbered & heavily encumbered)"
+},
+"SETTINGS.5eFeatsL": "Allow players to choose a feat rather than taking an Domain score improvement during archetype advancement.",
+"SETTINGS.5eFeatsN": "Allow Feats",
+"SETTINGS.5eHonorL": "Enable the use of the optional Honor Domain score. Requires the world to be reloaded.",
+"SETTINGS.5eHonorN": "Honor Domain Score",
+"SETTINGS.5eInitTBL": "Append the raw Dexterity Domain score to break ties in Initiative.",
+"SETTINGS.5eInitTBN": "Initiative Dexterity Tiebreaker",
+"SETTINGS.5eMetricN": "Use Metric Weight Units",
+"SETTINGS.5eMetricL": "Replaces all reference to lbs with kgs and updates the encumbrance calculations to use metric weight units.",
+"SETTINGS.5eNoAdvancementsN": "Disable level-up automation",
+"SETTINGS.5eNoAdvancementsL": "Do not prompt for level-up or character creation choices.",
+"SETTINGS.5eNoConcentrationN": "Disable concentration tracking",
+"SETTINGS.5eNoConcentrationL": "Disable the system's automated tracking of concentration.",
+"SETTINGS.5eProfBonus": "PHB: Bonus (+2, +3, +4, +5, +6)",
+"SETTINGS.5eProfDice": "DMG: Dice (1d4, 1d6, 1d8, 1d10, 1d12)",
+"SETTINGS.5eProfL": "Configure proficiency modifier to use a fixed bonus or a dice roll. Reloading the world is required for this change to take effect.",
+"SETTINGS.5eProfN": "Proficiency Variant",
+"SETTINGS.5eReset": "Reset",
+"SETTINGS.5eRestL": "Configure which rest variant should be used for games within this system.",
+"SETTINGS.5eRestN": "Rest Variant",
+"SETTINGS.5eRestPHB": "Player's Handbook (LR: 8 hours, SR: 1 hour)",
+"SETTINGS.5eRestGritty": "Gritty Realism (LR: 7 days, SR: 8 hours)",
+"SETTINGS.5eRestEpic": "Epic Heroism (LR: 1 hour, SR: 1 min)",
+"SETTINGS.5eGridAlignedSquareTemplatesL": "When square templates are created as the result of casting a spell or using an item, they will be locked to the grid alignment and unable to be rotated.",
+"SETTINGS.5eGridAlignedSquareTemplatesN": "Grid-Aligned Square Templates",
+"SETTINGS.5eSanityL": "Enable the use of the optional Sanity Domain score. Requires the world to be reloaded.",
+"SETTINGS.5eSanityN": "Sanity Domain Score",
+"SETTINGS.5eUndoChanges": "Undo Changes",
+"SETTINGS.5eTokenRings": {
+  "Name": "Disable Dynamic Token Rings",
+  "Hint": "Disabling the token ring animations can improve performance."
+},
+"SETTINGS.DUST": {
+  "ALLOWSUMMONING": {
+    "Name": "Allow Summoning",
+    "Hint": "Allow players to use summoning Domains to summon actors. Players must also have the Create Token core permission for this to work."
+  },
+  "BLOODIED": {
+    "Name": "Bloodied Status",
+    "Hint": "Configure whether the bloodied status is tracked automatically and its visibility.",
+    "All": "Display for Allies & Enemies",
+    "Player": "Only Display for Allies",
+    "None": "Never Display"
+  },
+  "COLLAPSETRAYS": {
+    "Name": "Collapse Trays in Chat",
+    "Hint": "Automatically collapse damage, hit, and effect trays that appear in chat cards.",
+    "Always": "Collapse All",
+    "Older": "Collapse Older Trays",
+    "Never": "Expand All"
+  },
+  "DEFAULTSKILLS": {
+    "Name": "Default Skills",
+    "Hint": "The default skills that appear on NPC sheets regardless of level of proficiency."
+  },
+  "LEVELING": {
+    "Name": "Leveling Mode",
+    "Hint": "Determine how the players gain new levels.",
+    "NoXP": "Level Advancement without XP",
+    "XP": "Experience Points",
+    "XPBoons": "Experience Points with Epic Boons"
+  },
+  "THEME": {
+    "Name": "Theme",
+    "Hint": "Theme that will apply to the UI and all sheets by default. Automatic will be determined by your browser or operating system settings."
+  },
+  "RULESVERSION": {
+    "Name": "Rules Version",
+    "Hint": "Change handling of various rules between the 2024 and 2014 rule sets.",
+    "Legacy": "Legacy Rules (2014)",
+    "Modern": "Modern Rules (2024)"
+  }
+},
+
+"SHEETS.DUST": {
+  "THEME": {
+    "Label": "Theme",
+    "Automatic": "Automatic",
+    "Dark": "Dark Mode",
+    "Light": "Light Mode"
+  }
+},
+
+"SOURCE.BOOK.SRD": "System Reference Document 5.1",
+"SIDEBAR.SortModePriority": "Sort by priority"
+}
