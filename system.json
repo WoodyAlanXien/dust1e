@@ -7,9 +7,9 @@
         "minimum": "12.331",
         "verified": "12"
     },
-    "url": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust1e\\dust1e\\",
-    "manifest": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust1e\\dust1e\\system.json",
-    "download": "C:\Users\zzyzz\OneDrive\Desktop\dust1e\dust1e.zip",
+    "url": "https://github.com/WoodyAlanXien/dust1e/",
+    "manifest": "https://github.com/WoodyAlanXien/dust1e/releases/download/current/system.json",
+    "download": "https://github.com/WoodyAlanXien/dust1e/releases/download/current/dust1e.zip",
     "authors": [
         {
             "name": "Woody Alan Xien",
