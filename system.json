@@ -1,5 +1,5 @@
 {
-    "id": "dust1e",
+    "id": "dust1e1e",
     "title": "DUST",
     "description": "A system for playing DUST in the Foundry Virtual Tabletop environment.",
     "version": "0.0.1",
@@ -7,9 +7,9 @@
         "minimum": "12.331",
         "verified": "12"
     },
-    "url": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust\\dust\\",
-    "manifest": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust\\dust\\system.json",
-    "download": "C:\Users\zzyzz\OneDrive\Desktop\dust\dust.zip",
+    "url": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust1e\\dust1e\\",
+    "manifest": "C:\\Users\\zzyzz\\OneDrive\\Desktop\\dust1e\\dust1e\\system.json",
+    "download": "C:\Users\zzyzz\OneDrive\Desktop\dust1e\dust1e.zip",
     "authors": [
         {
             "name": "Woody Alan Xien",
@@ -157,12 +157,12 @@
         {
             "name": "archetypes",
             "label": "Archetypes",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/archetypes",
             "type": "item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "archetype"
                     ]
@@ -172,12 +172,12 @@
         {
             "name": "origins",
             "label": "Origins (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/origins",
             "type": "item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "origin"
                     ]
@@ -187,12 +187,12 @@
         {
             "name": "gear",
             "label": "Gear (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/gear",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "weapon",
                         "equipment",
@@ -208,12 +208,12 @@
         {
             "name": "specialites",
             "label": "Specialites (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/specialities",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "specialities"
                     ]
@@ -223,12 +223,12 @@
         {
             "name": "disciplines",
             "label": "Disciplines (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/disciplines",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "discipline"
                     ]
@@ -238,7 +238,7 @@
         {
             "name": "rules",
             "label": "Rules (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/rules",
             "type": "JournalEntry",
             "private": false,
@@ -249,12 +249,12 @@
         {
             "name": "quirks",
             "label": "Quirks (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/quirks",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "quirk"
                     ]
@@ -264,12 +264,12 @@
         {
             "name": "drives",
             "label": "Drives (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/drives",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "drive"
                     ]
@@ -279,12 +279,12 @@
         {
             "name": "player-objectives",
             "label": "Player Objectives (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/player-objectives",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "player-objective"
                     ]
@@ -294,12 +294,12 @@
         {
             "name": "character-objectives",
             "label": "Character Objectives (SRD)",
-            "system": "dust",
+            "system": "dust1e",
             "path": "packs/character-objectives",
             "type": "Item",
             "private": false,
             "flags": {
-                "dust": {
+                "dust1e": {
                     "types": [
                         "character-objective"
                     ]
@@ -342,8 +342,8 @@
         },
         {
             "type": "setup",
-            "url": "systems/dust/ui/official/LogohypercubeColor.jpg",
-            "thumbnail": "systems/dust/ui/official/dust-thumbnail.jpg"
+            "url": "systems/dust1e/ui/official/hypercubeColor.jpg",
+            "thumbnail": "systems/dust1e/ui/official/hypercubeColor.jpg"
         }
     ],
     "socket": true,
@@ -353,19 +353,19 @@
     },
     "primaryTokenAttribute": "attributes.stress",
     "flags": {
-        "dust": {
+        "dust1e": {
             "sourceBooks": {
                 "SRD 5.1": "SOURCE.BOOK.SRD"
             },
             "spellLists": [
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.ziBzRlrpBm1KVV0j",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.cuG9d7J9fQH9InYT",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.MWiN7ILEO0Vd3zAZ",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.FhucONA0yRZQjMmb",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.sANq9JMycfSq3A5d",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.PVgly1xB2S2I8GLQ",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.mx4TsSbBIAaAkhQ7",
-                "Compendium.dust.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.k7Rs5EyXeA0SFTXD"
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.ziBzRlrpBm1KVV0j",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.cuG9d7J9fQH9InYT",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.MWiN7ILEO0Vd3zAZ",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.FhucONA0yRZQjMmb",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.sANq9JMycfSq3A5d",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.PVgly1xB2S2I8GLQ",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.mx4TsSbBIAaAkhQ7",
+                "Compendium.dust1e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.k7Rs5EyXeA0SFTXD"
             ]
         },
         "needsMigrationVersion": "4.0.1",
