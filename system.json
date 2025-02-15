@@ -111,7 +111,7 @@
 ]
 
     "socket": false,
-    "manifest": "https://github.com/woodyalanxien/dust1e/releases/latest",
+    "manifest": "https://github.com/woodyalanxien/dust1e/releases/latest/system.json",
     "download": "https://github.com/woodyalanxien/dust1e/archive/refs/tags/v1.0.0.zip",
     "background": "systems/dust1e/assets/background-image.jpg",
     "gridDistance": 5,
